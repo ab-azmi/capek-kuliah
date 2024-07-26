@@ -23,6 +23,23 @@ export default function Home() {
 
       {/* Main Content */}
       <TabContent />
+
+      {/* footer */}
+      <footer className="flex justify-center">
+        <p className="text-slate-400">
+          Made with ❤️ by{" "}
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 underline"
+          >
+            Angkatan 2020
+          </a>
+          &nbsp;|&nbsp;
+          Angkatan yang ga pernah masuk kampus
+        </p>
+      </footer>
     </main>
   );
 }
