@@ -99,7 +99,7 @@ export default function DashboardBoxes() {
                                     </div>
                                 )}
                                 {qna.type === 'answer' && (
-                                    <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-slate-300 ml-auto p-3 w-fit text-sm max-w-[80%]">
+                                    <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-secondary ml-auto p-3 w-fit text-sm max-w-[80%]">
                                         {qna.message}
                                     </div>
                                 )}
