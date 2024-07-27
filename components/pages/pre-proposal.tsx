@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useToast } from "@/components/ui/use-toast"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
 
 
 export default function PreProposal() {
@@ -48,8 +50,8 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Coba pilih dan langsung hubungi dosen pembimbing. Konsultasi, minta rekomendasi judul, topik, atau permasalahan
                         </p>
-                        <Link href={'/dosen'} target="_blank">
-                            <Button className="mt-3">List Dosen ILKOM</Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={'/dosen'} target="_blank">
+                            List Dosen ILKOM
                         </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
@@ -110,11 +112,9 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Ikuti format penulisan yang ada pada guide book. Kalau masih bingung, lihat skripsi kating.
                         </p>
-                        <Button className="mt-3">
-                            <Link href={"https://drive.google.com/file/d/16ZMuiPEHbvzfiw7clkk-X07GEoP_WASP/view?usp=sharing"} target="_blank">
-                                Guide Book
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/file/d/16ZMuiPEHbvzfiw7clkk-X07GEoP_WASP/view?usp=sharing"} target="_blank">
+                            Guide Book
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -159,11 +159,9 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Jika sudah disetujui pembimbing, minta tanda tangan dari dosen pembimbing yang menyatakan kamu sudah siap untuk mengikuti sempro
                         </p>
-                        <Button className="mt-3">
-                            <Link href={"https://docs.google.com/document/d/1wnwPZ7ex_Bk--Xuy_DaW8MBNSki3d_J4bJE5QmwT5d0/edit?usp=sharing"} target="_blank">
-                                Template Surat
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://docs.google.com/document/d/1wnwPZ7ex_Bk--Xuy_DaW8MBNSki3d_J4bJE5QmwT5d0/edit?usp=sharing"} target="_blank">
+                            Template Surat
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -192,11 +190,9 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Gunakan template PPT yang clean, minimalis, rapih, dan tidak membingungkan. Pastikan kalian paham materi, supaya tidak plonga-plongo
                         </p>
-                        <Button className="mt-3">
-                            <Link href={"https://drive.google.com/drive/folders/1ZGv7nZMfNtFgvIj0nVKgf2Jp14sTPw5m?usp=sharing"} target="_blank">
-                                Referensi PPT Kating
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/drive/folders/1ZGv7nZMfNtFgvIj0nVKgf2Jp14sTPw5m?usp=sharing"} target="_blank">
+                            Referensi PPT Kating
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -256,11 +252,9 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Pesan ruangan bisa dilakukan melalui Google Form. Jangan lupa untuk konfirmasi ke pengurus Lab setelah mengisinya
                         </p>
-                        <Button className="mt-3">
-                            <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
-                                Google Form
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
+                            Google Form
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">

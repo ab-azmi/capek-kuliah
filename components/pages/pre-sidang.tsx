@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
 import { useToast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
 
 export default function PreSidang() {
     const { toast } = useToast();
@@ -83,12 +84,10 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Setelah disetujui, minta tanda tangan persetujuan sidang dari pembimbingmu.
                         </p>
-                        <Button className="mt-3">
-                            <Link href="https://docs.google.com/document/d/1QlrtHgzBr0-vZKFQduJzbMPZ36_4BY0TR3pUwixkHYM/edit?usp=sharing"
-                                target="_blank">
-                                Template Surat
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/1QlrtHgzBr0-vZKFQduJzbMPZ36_4BY0TR3pUwixkHYM/edit?usp=sharing"
+                            target="_blank">
+                            Template Surat
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -148,11 +147,9 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Surat ini berguna untuk mengajukan jadwal sidang. Butuh TTD oleh Ketua Jurusan dan Pembimbing
                         </p>
-                        <Button className="mt-3">
-                            <Link href=" https://docs.google.com/document/d/1FXboqlttNonoPinSD--OQSSo2muvUpdqh5o1WZkryo/edit?usp=sharing" target="_blank">
-                                Template Surat
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href=" https://docs.google.com/document/d/1FXboqlttNonoPinSD--OQSSo2muvUpdqh5o1WZkryo/edit?usp=sharing" target="_blank">
+                            Template Surat
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -161,11 +158,9 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Surat ini berfungsi untuk merekap aktivitas bimbingan kamu. Akan ditandatangani oleh Ketua Jurusan
                         </p>
-                        <Button className="mt-3">
-                            <Link href=" https://docs.google.com/document/d/1-Djpam0_mMF3WtlM5QoLi7u4N_t1mI640D3WOIV6IJs/edit?usp=sharing" target="_blank">
-                                Template Surat
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href=" https://docs.google.com/document/d/1-Djpam0_mMF3WtlM5QoLi7u4N_t1mI640D3WOIV6IJs/edit?usp=sharing" target="_blank">
+                            Template Surat
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -174,11 +169,9 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Surat ini isinya identitas kalian. Udah, itu aja
                         </p>
-                        <Button className="mt-3">
-                            <Link href={'https://docs.google.com/document/d/1aKK7pkVcHEKuO_cbcwilPoVrdN9h3_9wRji-DuVWiQ/edit?usp=sharing'} target="_blank">
-                                Template Surat
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={'https://docs.google.com/document/d/1aKK7pkVcHEKuO_cbcwilPoVrdN9h3_9wRji-DuVWiQ/edit?usp=sharing'} target="_blank">
+                            Template Surat
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -187,11 +180,9 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Ini hal penting. Wajib kalian isi. Jadi syarat wajib dalam SBVT nanti
                         </p>
-                        <Button className="mt-3">
-                            <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScSTUmBRdza0zl2Nu-O8Botlg9-zQp83FkP_i9RP_-jdKOZ1A/viewform'} target="_blank">
-                                Google Form
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={'https://docs.google.com/forms/d/e/1FAIpQLScSTUmBRdza0zl2Nu-O8Botlg9-zQp83FkP_i9RP_-jdKOZ1A/viewform'} target="_blank">
+                            Google Form
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -220,11 +211,9 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Isi form dengan cermat dan jangan sampai salah
                         </p>
-                        <Button className="mt-3">
-                            <Link href="http://bit.ly/daftarujianilkom" target="_blank">
-                                Google Form
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="http://bit.ly/daftarujianilkom" target="_blank">
+                            Google Form
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -244,11 +233,9 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Jangan lupa untuk melakukan konfirmasi pemesanan ruang sidang ke Teknisi Lab
                         </p>
-                        <Button className="mt-3">
-                            <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
-                                Google Form
-                            </Link>
-                        </Button>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
+                            Google Form
+                        </Link>
                     </div>
                 </div>
             </div>

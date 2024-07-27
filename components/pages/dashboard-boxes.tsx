@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback } from "../ui/avatar"
 import Image from "next/image"
 import { berkasWajib } from "@/data/berkas-wajib"
 import { useState } from "react"
+import { buttonVariants } from "@/components/ui/button"
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -43,29 +44,27 @@ export default function DashboardBoxes() {
                     <div className="mt-5 flex flex-col gap-3">
                         <div className="flex justify-between items-center">
                             Joki Penulisan
-                            <Button size={'sm'}>
-                                <Link href={'https://www.youtube.com/watch?v=hZORcRzy-lY'} target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
-                            </Button>
+                            <Link className={buttonVariants({size: 'sm'})} href={'https://www.youtube.com/watch?v=hZORcRzy-lY'} target="_blank">
+                                <Link2 size={16} />
+                            </Link>
                         </div>
                         <div className="flex justify-between items-center">
                             Joki Web & UI/UX
-                            <Button size={'sm'}>
-                                <Link2 size={16} />
-                            </Button>
+                                <Link className={buttonVariants({size: 'sm'})} href="https://www.youtube.com/watch?v=BJrAbX6ps2s" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
                         </div>
                         <div className="flex justify-between items-center">
                             Joki ML & AI
-                            <Button size={'sm'}>
-                                <Link2 size={16} />
-                            </Button>
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/uVYjZKWEWmk?t=368" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
                         </div>
                         <div className="flex justify-between items-center">
                             Joki Full Set
-                            <Button size={'sm'}>
-                                <Link2 size={16} />
-                            </Button>
+                                <Link className={buttonVariants({size: 'sm'})} href="https://cornhub.website" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
                         </div>
                     </div>
                     <p className="text-slate-400 mt-2 text-xs lg:text-sm italic">

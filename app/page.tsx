@@ -1,7 +1,9 @@
 import { ModeToggle } from "@/components/dark-mode-toggle";
 import DashboardBoxes from "@/components/pages/dashboard-boxes";
 import TabContent from "@/components/pages/tab-content";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -17,7 +19,9 @@ export default function Home() {
           <ModeToggle />
         </div>
         <div className="flex lg:flex-row flex-col gap-2 items-center lg:justify-between">
-          <Button className="text-xs lg:text-base w-full lg:w-fit">Request Update</Button>
+          
+            <Link href="/update-form" className={cn(buttonVariants(), 'text-xs lg:text-base w-full lg:w-fit')}>Request Update</Link>
+            
           <p className="text-slate-400 italic lg:text-base text-xs">Updated 28 juli 2024</p>
         </div>
       </div>
