@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { Switch } from "../ui/switch";
@@ -30,7 +31,9 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Coba pilih dan langsung hubungi dosen pembimbing. Konsultasi, minta rekomendasi judul, topik, atau permasalahan
                         </p>
-                        <Button className="mt-3">List Dosen ILKOM</Button>
+                        <Link href={'/dosen'} target="_blank">
+                            <Button className="mt-3">List Dosen ILKOM</Button>
+                        </Link>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
