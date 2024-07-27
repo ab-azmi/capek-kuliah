@@ -115,7 +115,7 @@ export default function DashboardBoxes() {
                 </div>
                 {/* Referensi Jurnal */}
                 <div className="border-2 rounded-lg p-5">
-                    <h1 className="font-bold text-2xl">Referensi Jurnal</h1>
+                    <h1 className="font-bold text-2xl">Referensi Artikel</h1>
                     <p className=" text-slate-400">
                         Beberapa referensi untuk mencari artikel
                     </p>

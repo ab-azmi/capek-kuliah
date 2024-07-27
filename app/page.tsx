@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col gap-14 px-36 py-20">
+    <main className="flex min-h-screen flex-col gap-14 px-20 lg:px-36 py-20">
       <div className="flex flex-col gap-5">
         <div className="flex items-center justify-between">
           <div>
