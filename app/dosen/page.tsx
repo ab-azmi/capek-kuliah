@@ -14,23 +14,23 @@ import { dosenTI, dosenSI } from "@/data/dosen"
 export default function ListDosen() {
 
     return (
-        <main className="flex min-h-screen flex-col gap-14 px-36 py-20">
+        <main className="flex min-h-screen flex-col gap-4 lg:gap-14 px-4 md:px-20 lg:px-36 py-5 lg:py-20">
             <div className="flex flex-col gap-5">
                 <div>
-                    <h1 className="text-3xl font-bold">List Dosen ILKOM UNNES</h1>
-                    <p className=" text-lg text-slate-400">
-                        Lengkap dengan kontak dan opini kating
+                    <h1 className="text-xl lg:text-3xl font-bold">List Dosen ILKOM UNNES</h1>
+                    <p className="text-sm lg:text-lg text-slate-400">
+                        Lengkap dengan kontak dan info lainnya
                     </p>
                 </div>
             </div>
 
             <Tabs defaultValue="ti" className="w-full">
                 <TabsList>
-                    <TabsTrigger value="ti">Teknik Informatika</TabsTrigger>
-                    <TabsTrigger value="si">Sistem Informasi</TabsTrigger>
+                    <TabsTrigger className="text-xs md:text-base" value="ti">Teknik Informatika</TabsTrigger>
+                    <TabsTrigger className="text-xs md:text-base" value="si">Sistem Informasi</TabsTrigger>
                 </TabsList>
                 <TabsContent value="ti">
-                    <div className="grid grid-cols-3 gap-5 mt-10">
+                    <div className="flex flex-col lg:grid lg:grid-cols-3 gap-5 mt-5 lg:mt-10">
                         {dosenTI.map((dosen) => (
                             <Card className="max-w-lg" key={dosen.email}>
                                 <CardHeader>
@@ -42,8 +42,8 @@ export default function ListDosen() {
                                             </AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <h1 className="font-bold text-sm capitalize">{dosen.name}</h1>
-                                            <p className="text-sm text-slate-400">{dosen.email}</p>
+                                            <h1 className="font-bold text-xs lg:text-sm capitalize">{dosen.name}</h1>
+                                            <p className="text-xs lg:text-sm text-slate-400">{dosen.email}</p>
                                         </div>
                                     </div>
                                 </CardHeader>
@@ -59,7 +59,7 @@ export default function ListDosen() {
                     </div>
                 </TabsContent>
                 <TabsContent value="si">
-                    <div className="grid grid-cols-3 gap-5 mt-10">
+                    <div className="flex flex-col lg:grid lg:grid-cols-3 gap-5 mt-10">
                         {dosenSI.map((dosen) => (
                             <Card className="max-w-lg" key={dosen.email}>
                                 <CardHeader>
@@ -71,8 +71,8 @@ export default function ListDosen() {
                                             </AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <h1 className="font-bold text-sm capitalize">{dosen.name}</h1>
-                                            <p className="text-sm text-slate-400">{dosen.email}</p>
+                                            <h1 className="font-bold text-xs lg:text-sm capitalize">{dosen.name}</h1>
+                                            <p className="text-xs lg:text-sm text-slate-400">{dosen.email}</p>
                                         </div>
                                     </div>
                                 </CardHeader>

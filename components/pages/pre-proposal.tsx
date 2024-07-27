@@ -24,7 +24,7 @@ export default function PreProposal() {
     return (
         <div>
             {/* 1 */}
-            <div className="py-5 grid grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <div className="bg-primary rounded-lg p-5 h-fit">
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
@@ -69,7 +69,7 @@ export default function PreProposal() {
                 </div>
             </div>
             {/* 2 */}
-            <div className="py-5 grid grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <div className="bg-primary rounded-lg p-5 h-fit">
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
@@ -119,7 +119,7 @@ export default function PreProposal() {
                 </div>
             </div>
             {/* 3 */}
-            <div className="py-5 grid grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <div className="bg-primary rounded-lg p-5 h-fit">
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
@@ -168,7 +168,7 @@ export default function PreProposal() {
                 </div>
             </div>
             {/* 4 */}
-            <div className="py-5 grid grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <div className="bg-primary rounded-lg p-5 h-fit">
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
@@ -223,7 +223,7 @@ export default function PreProposal() {
                 </div>
             </div>
             {/* 5 */}
-            <div className="py-5 grid grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <div className="bg-primary rounded-lg p-5 h-fit">
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
