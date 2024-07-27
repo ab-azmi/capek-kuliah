@@ -12,12 +12,12 @@ export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
 
     return (
-        <div className="flex gap-5">
-            <div className="w-1/3 flex flex-col gap-5">
+        <div className="flex-col lg:flex-row flex gap-5">
+            <div className="w-full lg:w-1/3 flex lg:flex-col flex-col-reverse gap-5">
                 {/* Berkas Wajib */}
-                <div className="border-2 rounded-lg p-5">
-                    <h1 className="font-bold text-2xl">Berkas Wajib</h1>
-                    <p className=" text-slate-400">
+                <div className="border-2 rounded-lg p-3 lg:p-5">
+                    <h1 className="font-bold text-xl lg:text-2xl">Berkas Wajib</h1>
+                    <p className=" text-slate-400 text-sm lg:text-base">
                         Siapkan dari awal karena sulit mendapatkannya
                     </p>
                     <div className="mt-5 flex flex-col gap-3">
@@ -35,9 +35,9 @@ export default function DashboardBoxes() {
                     </div>
                 </div>
                 {/* Joki */}
-                <div className="border-2 rounded-lg p-5">
-                    <h1 className="font-bold text-2xl">Jasa Joki</h1>
-                    <p className=" text-slate-400">
+                <div className="border-2 rounded-lg p-3 lg:p-5">
+                    <h1 className="font-bold text-xl lg:text-2xl">Jasa Joki</h1>
+                    <p className=" text-slate-400 lg:text-base text-sm">
                         Kalau mau instan, bisa cek di bawah ini
                     </p>
                     <div className="mt-5 flex flex-col gap-3">
@@ -68,14 +68,14 @@ export default function DashboardBoxes() {
                             </Button>
                         </div>
                     </div>
-                    <p className="text-slate-400 mt-2 text-sm italic">
+                    <p className="text-slate-400 mt-2 text-xs lg:text-sm italic">
                         *beda tipe beda harga ya
                     </p>
                 </div>
             </div>
-            <div className="w-1/3 flex flex-col gap-5">
+            <div className="w-full lg:w-1/3 flex flex-col gap-5">
                 {/* QnA */}
-                <div className="border-2 rounded-lg p-5">
+                <div className="border-2 rounded-lg p-3 lg:p-5">
                     <div className="flex gap-3 items-center">
                         <Avatar>
                             <AvatarFallback>
@@ -84,26 +84,26 @@ export default function DashboardBoxes() {
                         </Avatar>
                         <div>
                             <h1 className="font-bold text-sm">Informan</h1>
-                            <p className=" text-slate-400 text-sm">
+                            <p className=" text-slate-400 text-xs lg:text-sm">
                                 informanqna@mail.unnes.ac.id
                             </p>
                         </div>
                     </div>
                     <div className="mt-5 flex flex-col gap-5 h-[18rem] overflow-y-scroll">
                         {selectedQna.qna.map((qna) => (
-                            <>
+                            <div key={qna.message}>
                                 {qna.type === 'question' && (
 
-                                    <div className="bg-secondary rounded-r-lg rounded-tl-lg p-3 w-fit text-sm max-w-[80%]">
+                                    <div className="bg-secondary rounded-r-lg rounded-tl-lg p-3 w-fit text-sm max-w-[90%] lg:max-w-[80%]">
                                         {qna.message}
                                     </div>
                                 )}
                                 {qna.type === 'answer' && (
-                                    <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-secondary ml-auto p-3 w-fit text-sm max-w-[80%]">
+                                    <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-secondary ml-auto p-3 w-fit text-sm max-w-[90%] lg:max-w-[80%]">
                                         {qna.message}
                                     </div>
                                 )}
-                            </>
+                            </div>
                         ))}
                     </div>
                     <div className="mt-5 flex gap-3">
@@ -114,9 +114,9 @@ export default function DashboardBoxes() {
                     </div>
                 </div>
                 {/* Referensi Jurnal */}
-                <div className="border-2 rounded-lg p-5">
-                    <h1 className="font-bold text-2xl">Referensi Jurnal</h1>
-                    <p className=" text-slate-400">
+                <div className="border-2 rounded-lg p-3 lg:p-5">
+                    <h1 className="font-bold text-xl lg:text-2xl">Referensi Artikel</h1>
+                    <p className=" text-slate-400 text-sm lg:text-base">
                         Beberapa referensi untuk mencari artikel
                     </p>
                     <div className="mt-5 flex flex-col gap-3">
@@ -135,14 +135,14 @@ export default function DashboardBoxes() {
                     </div>
                 </div>
             </div>
-            <div className="w-1/3 flex flex-col gap-5">
+            <div className="w-full lg:w-1/3 flex flex-col gap-5">
                 {/* Dev Team */}
-                <div className="border-2 rounded-lg p-5">
-                    <h1 className="font-bold text-2xl">Dev Team</h1>
-                    <p className=" text-slate-400">
+                <div className="border-2 rounded-lg p-3 lg:p-5">
+                    <h1 className="font-bold text-xl lg:text-2xl">Dev Team</h1>
+                    <p className=" text-slate-400 text-sm lg:text-base">
                         Selaku dev team sangat berterimakasih & senang bisa bantu kalian. Kalau ada yg keliru, hubungi saja ya
                     </p>
-                    <div className="mt-5 flex flex-col gap-5">
+                    <div className="mt-5 flex flex-col gap-3 lg:gap-5">
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
@@ -151,7 +151,7 @@ export default function DashboardBoxes() {
                             </Avatar>
                             <div className="flex flex-col">
                                 <h1 className="font-bold text-sm">Kating</h1>
-                                <p className=" text-slate-400 text-sm">
+                                <p className=" text-slate-400 text-xs lg:text-sm">
                                     kating@gmail.com
                                 </p>
                             </div>
@@ -164,7 +164,7 @@ export default function DashboardBoxes() {
                             </Avatar>
                             <div className="flex flex-col">
                                 <h1 className="font-bold text-sm">Kating</h1>
-                                <p className=" text-slate-400 text-sm">
+                                <p className=" text-slate-400 text-xs lg:text-sm">
                                     kating@gmail.com
                                 </p>
                             </div>
@@ -177,7 +177,7 @@ export default function DashboardBoxes() {
                             </Avatar>
                             <div className="flex flex-col">
                                 <h1 className="font-bold text-sm">Kating</h1>
-                                <p className=" text-slate-400 text-sm">
+                                <p className=" text-slate-400 text-xs lg:text-sm">
                                     kating@gmail.com
                                 </p>
                             </div>
@@ -185,9 +185,9 @@ export default function DashboardBoxes() {
                     </div>
                 </div>
                 {/* TOol Helper */}
-                <div className="border-2 rounded-lg p-5 h-full">
-                    <h1 className="font-bold text-2xl">Tools Helper Skripsian</h1>
-                    <p className=" text-slate-400">
+                <div className="border-2 rounded-lg p-3 lg:p-5 h-full">
+                    <h1 className="font-bold lg:text-2xl text-xl">Tools Helper Skripsian</h1>
+                    <p className=" text-slate-400 text-sm lg:text-sm">
                         Beberapa Tool yang bisa bantu kamu skripsian
                     </p>
                     <div className="flex gap-4 flex-wrap mt-5">

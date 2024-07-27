@@ -1,5 +1,307 @@
-export default function PreSidang(){
+"use client"
+import Link from "next/link";
+import { Button } from "../ui/button";
+import { CheckboxWithLabel } from "../checkbox-label";
+import { useToast } from "@/components/ui/use-toast";
+
+export default function PreSidang() {
+    const { toast } = useToast();
+
+    const textAturJadwalSidang = `Assalamualaikum Wr. Wb. Selamat Pagi Bu. Mohon maaf mengganggu. Saya Abdillah Azmi, NIM 4611420020. Saya menghubungi berkaitan dengan sidang skripsi Bu. Sebagai penguji 1 saya, apakah Ibu punya waktu luang minggu depan untuk melaksanakan sidang skripsi? Terimakasih waktunya. Wassalamualaikum Wr. Wb.`;
+    const textKonfirmasiSidang = `Assalamu'alaikum Wr. Wb. Selamat Pagi Pak Alamsyah, mohon maaf apabila mengganggu waktu Bapak. Saya Bimo Aryo Bramantyo KR, NIM 4611420038, Izin menyampaikan dan memberikan konfirmasi bahwa saya telah mengisi formulir pendaftaran sidang skripsi. Saya memohon arahan bapak terkait SK penguji supaya saya dapat melaksanakan sidang skripsi, Pak.Terima Kasih Pak`;
+
+    const copyChat = (text: string) => {
+        navigator.clipboard.writeText(text).then(() => {
+            toast({
+                title: "Template berhasil disalin",
+            })
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    }
     return (
-        <h1>Pre sidang</h1>
+        <div>
+            {/* 6 */}
+            <div className="py-5 grid grid-cols-3 gap-4">
+                <div className="bg-primary rounded-lg p-5 h-fit">
+                    <div className="flex gap-3">
+                        <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
+                            6
+                        </div>
+                        <div>
+                            <h1 className="text-2xl text-secondary font-bold">
+                                Melakukan Bimbingan Rutin
+                            </h1>
+                            <p className=" text-slate-400">
+                                Setelah sempro, jangan jeda kelamaan. Langsung sat set
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-2 flex flex-col gap-4">
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Revisi Proposal dan Menulis Bab 4 & 5
+                        </h1>
+                        <p className=" text-slate-400">
+                            Untuk mengikuti sidang skripsi, kamu harus melakukan bimbingan sebanyak 12x. Jangan lupa input data bimbingan ke Sitedi.
+                        </p>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Bisa Mulai Menulis Artikel Di tahap ini
+                        </h1>
+                        <p className=" text-slate-400">
+                            Selain menulis Bab 4 dan 5, kamu juga bisa mulai menulis artikel skripsi disini. Atau bisa juga nanti setelah sidang.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            {/* 7 */}
+            <div className="py-5 grid grid-cols-3 gap-4">
+                <div className="bg-primary rounded-lg p-5 h-fit">
+                    <div className="flex gap-3">
+                        <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
+                            7
+                        </div>
+                        <div>
+                            <h1 className="text-2xl text-secondary font-bold">
+                                Disetujui Mengikuti Sidang Skripsi
+                            </h1>
+                            <p className=" text-slate-400">
+                                Selamat sudah disetujui sidang
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-2 flex flex-col gap-4">
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Surat Persetujuan Pembimbing
+                        </h1>
+                        <p className=" text-slate-400">
+                            Setelah disetujui, minta tanda tangan persetujuan sidang dari pembimbingmu.
+                        </p>
+                        <Button className="mt-3">
+                            <Link href="https://docs.google.com/document/d/1QlrtHgzBr0-vZKFQduJzbMPZ36_4BY0TR3pUwixkHYM/edit?usp=sharing"
+                                target="_blank">
+                                Template Surat
+                            </Link>
+                        </Button>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Atur Jadwal Pertemuan Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
+                        </p>
+                        <Button className="mt-3" onClick={() => copyChat(textAturJadwalSidang)}>
+                            Template Chat
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            {/* 8 */}
+            <div className="py-5 grid grid-cols-3 gap-4">
+                <div className="bg-primary rounded-lg p-5 h-fit">
+                    <div className="flex gap-3">
+                        <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
+                            8
+                        </div>
+                        <div>
+                            <h1 className="text-2xl text-secondary font-bold">
+                                Berkas Sidang
+                            </h1>
+                            <p className=" text-slate-400">
+                                Berkas untuk sidang ini lebih banyak dari sempro. Jangan sampai salah baca. Yang teliti.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-2 flex flex-col gap-4">
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Persiapan Berkas
+                        </h1>
+                        <p className=" text-slate-400">
+                            Setelah disetujui, minta tanda tangan persetujuan sidang dari pembimbingmu.
+                        </p>
+                        <div className="mt-3 flex flex-col gap-3">
+                            <CheckboxWithLabel label="Scan KTM" />
+                            <CheckboxWithLabel label="Scan Rekap Hasil Studi (Sikadu)" />
+                            <CheckboxWithLabel label="Scan KRS (Sikadu)" />
+                            <CheckboxWithLabel label="Scan Bukti Pembayaran UKT Terakhir" />
+                            <CheckboxWithLabel label="Scan Sertifikat KKL (Kuliah Kerja Lapangan)" />
+                            <CheckboxWithLabel label="Scan Sertifikat TOEFL dengan skor min 427" />
+                            <CheckboxWithLabel label="Scan Sertifikat SNIK" />
+                            <CheckboxWithLabel label="Scan Sertifikat Course" />
+                            <CheckboxWithLabel label="Scan Sertifikat Kompre" />
+                            <CheckboxWithLabel label="Scan SK Pembimbing" />
+                        </div>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Surat Usulan Pengujian
+                        </h1>
+                        <p className=" text-slate-400">
+                            Surat ini berguna untuk mengajukan jadwal sidang. Butuh TTD oleh Ketua Jurusan dan Pembimbing
+                        </p>
+                        <Button className="mt-3">
+                            <Link href=" https://docs.google.com/document/d/1FXboqlttNonoPinSD--OQSSo2muvUpdqh5o1WZkryo/edit?usp=sharing" target="_blank">
+                                Template Surat
+                            </Link>
+                        </Button>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Surat Rekap Bimbingan
+                        </h1>
+                        <p className=" text-slate-400">
+                            Surat ini berfungsi untuk merekap aktivitas bimbingan kamu. Akan ditandatangani oleh Ketua Jurusan
+                        </p>
+                        <Button className="mt-3">
+                            <Link href=" https://docs.google.com/document/d/1-Djpam0_mMF3WtlM5QoLi7u4N_t1mI640D3WOIV6IJs/edit?usp=sharing" target="_blank">
+                                Template Surat
+                            </Link>
+                        </Button>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Surat Identitas
+                        </h1>
+                        <p className=" text-slate-400">
+                            Surat ini isinya identitas kalian. Udah, itu aja
+                        </p>
+                        <Button className="mt-3">
+                            <Link href={'https://docs.google.com/document/d/1aKK7pkVcHEKuO_cbcwilPoVrdN9h3_9wRji-DuVWiQ/edit?usp=sharing'} target="_blank">
+                                Template Surat
+                            </Link>
+                        </Button>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Submit Skripsi Kalian ke Turnitin UNNES
+                        </h1>
+                        <p className=" text-slate-400">
+                            Ini hal penting. Wajib kalian isi. Jadi syarat wajib dalam SBVT nanti
+                        </p>
+                        <Button className="mt-3">
+                            <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScSTUmBRdza0zl2Nu-O8Botlg9-zQp83FkP_i9RP_-jdKOZ1A/viewform'} target="_blank">
+                                Google Form
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            {/* 9 */}
+            <div className="py-5 grid grid-cols-3 gap-4">
+                <div className="bg-primary rounded-lg p-5 h-fit">
+                    <div className="flex gap-3">
+                        <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
+                            9
+                        </div>
+                        <div>
+                            <h1 className="text-2xl text-secondary font-bold">
+                                Mendaftar Sidang
+                            </h1>
+                            <p className=" text-slate-400">
+                                Mantap. Sudah sampai level 9. Semangat untuk persiapan sidangnya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-2 flex flex-col gap-4">
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Mengisi Form Pendaftaran Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Isi form dengan cermat dan jangan sampai salah
+                        </p>
+                        <Button className="mt-3">
+                            <Link href="http://bit.ly/daftarujianilkom" target="_blank">
+                                Google Form
+                            </Link>
+                        </Button>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Konfirmasi ke Ketua Jurusan
+                        </h1>
+                        <p className=" text-slate-400">
+                            Setelah mengisi form, konfirmasi ke Kajur supaya mendapatkan file “Berkas Ujian”. Simpan file tersebut
+                        </p>
+                        <Button className="mt-3" onClick={() => copyChat(textKonfirmasiSidang)}>
+                            Template Chat
+                        </Button>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Pemesanan Ruang Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Jangan lupa untuk melakukan konfirmasi pemesanan ruang sidang ke Teknisi Lab
+                        </p>
+                        <Button className="mt-3">
+                            <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
+                                Google Form
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            {/* 10 */}
+            <div className="py-5 grid grid-cols-3 gap-4">
+                <div className="bg-primary rounded-lg p-5 h-fit">
+                    <div className="flex gap-3">
+                        <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
+                            10
+                        </div>
+                        <div>
+                            <h1 className="text-2xl text-secondary font-bold">
+                                Sidang
+                            </h1>
+                            <p className=" text-slate-400">
+                                Mantap. Sudah sampai level 9. Semangat untuk persiapan sidangnya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-2 flex flex-col gap-4">
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Perisapan Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Kumpulkan hal-hal yang diperlukan saat sidang. Jangan lupa belajar presentasi.
+                        </p>
+                        <div className="mt-3 flex flex-col gap-3">
+                            <CheckboxWithLabel label="PPT Sidang" />
+                            <CheckboxWithLabel label="Snack dan Minum" />
+                            <CheckboxWithLabel label="Alat Tulis" />
+                            <CheckboxWithLabel label="Cetak file Berkas Ujian" />
+                        </div>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            H-1 Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Jangan lupa untuk mengingatkan Dosen terkait jadwal sidang mu. Supaya mereka tidak lupa
+                        </p>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Semarangat sidangnya !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

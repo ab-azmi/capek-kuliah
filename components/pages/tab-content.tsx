@@ -7,18 +7,18 @@ import PreWisuda from "./pre-wisuda";
 export default function TabContent() {
     return (
         <div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-y-5">
                 <div>
-                    <h1 className="text-2xl font-bold">Tahap Pembuatan Skripsi</h1>
-                    <p className=" text-lg text-slate-400">
+                    <h1 className="text-xl lg:text-2xl font-bold">Tahap Pembuatan Skripsi</h1>
+                    <p className="text-sm lg:text-lg text-slate-400">
                         Baca dari atas-kiri ke bawah-kanan. Langkah utama, di sebelah kiri
                     </p>
                 </div>
                 <Tabs defaultValue="pre-proposal" className="w-full">
                     <TabsList>
-                        <TabsTrigger value="pre-proposal">Pre-Proposal</TabsTrigger>
-                        <TabsTrigger value="pre-sidang">Pre-Sidang</TabsTrigger>
-                        <TabsTrigger value="pre-wisuda">Pre-Wisuda</TabsTrigger>
+                        <TabsTrigger value="pre-proposal" className="text-xs md:text-base">Pre-Proposal</TabsTrigger>
+                        <TabsTrigger value="pre-sidang" className="text-xs md:text-base">Pre-Sidang</TabsTrigger>
+                        <TabsTrigger value="pre-wisuda" className="text-xs md:text-base">Pre-Wisuda</TabsTrigger>
                     </TabsList>
                     <TabsContent value="pre-proposal">
                         <PreProposal />
