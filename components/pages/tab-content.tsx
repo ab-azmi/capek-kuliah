@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+"use client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import PreProposal from "./pre-proposal";
 import PreSidang from "./pre-sidang";
