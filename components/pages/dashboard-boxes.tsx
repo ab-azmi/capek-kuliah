@@ -36,7 +36,7 @@ export default function DashboardBoxes() {
                     </div>
                 </div>
                 {/* Joki */}
-                <div className="border-2 rounded-lg p-3 lg:p-5">
+                <div className="border-2 rounded-lg p-3 lg:p-5 h-full">
                     <h1 className="font-bold text-xl lg:text-2xl">Jasa Joki</h1>
                     <p className=" text-slate-400 lg:text-base text-sm">
                         Kalau mau instan, bisa cek di bawah ini
@@ -78,7 +78,7 @@ export default function DashboardBoxes() {
                     <div className="flex gap-3 items-center">
                         <Avatar>
                             <AvatarFallback>
-                                KT
+                                IM
                             </AvatarFallback>
                         </Avatar>
                         <div>
@@ -145,26 +145,26 @@ export default function DashboardBoxes() {
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    KT
+                                    KH
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Kating</h1>
+                                <h1 className="font-bold text-sm">kudahitam</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
-                                    kating@gmail.com
+                                    kudahitam22@gmail.com
                                 </p>
                             </div>
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    KT
+                                    BL
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Kating</h1>
+                                <h1 className="font-bold text-sm">BabiLapas</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
-                                    kating@gmail.com
+                                    balap24@gmail.com
                                 </p>
                             </div>
                         </div>
