@@ -12,7 +12,7 @@ export const berkasWajib = [
                 type: 'answer'
             },
             {
-                message: 'Kak aku ga punya sertif SNIK',
+                message: 'Kak aku ga punya sertif SNIK. Gimana?',
                 type: 'question'
             },
             {
@@ -38,15 +38,15 @@ export const berkasWajib = [
                 type: 'question'
             },
             {
-                message: 'Coba cari cek aplikasi Kompre di Apps.Unnes ya',
+                message: 'Coba kau cek aplikasi Kompre di Apps.Unnes tu',
                 type: 'answer'
             },
             {
-                message: 'Klo ga lulus gimana ntar?',
+                message: 'Klo ga lulus gimana bang?',
                 type: 'question'
             },
             {
-                message: 'Coba daftar ulang tes kompre lagi ya',
+                message: 'Tolol kau. Mudah itu. Tinggal daftar ulang kalau gagal',
                 type: 'answer'
             },
             {
@@ -54,7 +54,7 @@ export const berkasWajib = [
                 type: 'question'
             },
             {
-                message: 'Skip',
+                message: 'Skip. mo nonton JKT48',
                 type: 'answer'
             },
         ]

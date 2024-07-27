@@ -24,9 +24,9 @@ export default function DashboardBoxes() {
                         {berkasWajib.map((berkas) => (
                             <div key={berkas.id} className="flex justify-between items-center">
                                 {berkas.name}
-                                <Button 
+                                <Button
                                     onClick={() => setSelectedQna(berkas)}
-                                    size={'sm'} 
+                                    size={'sm'}
                                     className={selectedQna.id != berkas.id ? 'bg-secondary text-primary' : 'bg-primary text-secondary'}>
                                     <MessageCircle size={16} />
                                 </Button>
@@ -44,7 +44,9 @@ export default function DashboardBoxes() {
                         <div className="flex justify-between items-center">
                             Joki Penulisan
                             <Button size={'sm'}>
-                                <Link2 size={16} />
+                                <Link href={'https://www.youtube.com/watch?v=hZORcRzy-lY'} target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
                             </Button>
                         </div>
                         <div className="flex justify-between items-center">

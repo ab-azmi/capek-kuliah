@@ -1,9 +1,26 @@
+"use client"
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Label } from "../ui/label";
-import { Switch } from "../ui/switch";
+import { useToast } from "@/components/ui/use-toast"
+
 
 export default function PreProposal() {
+    const { toast } = useToast();
+
+    const textMintaPembimbing = `Assalamualaikum Warahmatullahi Wabarakatuh. Selamat Siang Pak Alamsyah, mohon maaf mengganggu waktu Bapak. Saya {nama} dengan NIM {nim}. Saya telah menuliskan topik dan judul skripsi saya di Sitedi, saya memohon bantuan bapak untuk memasukkan {pembimbing} sebagai dosen pembimbing saya, Pak. Terima kasih, Pak`;
+    const textMintaPenguji = `Assalamualaikum wr. wb. Selamat sore, Pak Alamsyah. Mohon maaf mengganggu waktu Bapak. Saya {name} NIM {nim}. Izin menyampaikan bahwa saya telah mengisi formulir pendaftaran seminar proposal. Mohon arahannya terkait plotting dosen penguji saya Pak. Terima kasih, Pak. 🙏 Wassalamualaikum wr. wb.`;
+    const textAturJadwalSempro = `Assalamualaikum Wr. Wb. Selamat siang Bu, mohon maaf mengganggu. Saya {nama} NIM {nim}, TI {angkatan}. Pada semester ini saya berencana untuk menyelesaikan skripsi. Lalu sesuai arahan dari Pak Alam, Ibu bersama dengan Pak {nama penguji lain} akan menjadi penguji 1 dan 2 saya. Mohon bimbingannya Ibu.Selain itu, kalau boleh tahu apa minggu depan Ibu ada waktu senggang untuk melaksanakan seminar proposal saya?Terimakasih. Wassalamualaikum Wr. Wb.`
+
+    const copyChat = (text: string) => {
+        navigator.clipboard.writeText(text).then(() => {
+            toast({
+                title: "Template berhasil disalin",
+            })
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    }
+
     return (
         <div>
             {/* 1 */}
@@ -84,7 +101,7 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Langkah ini bertujuan untuk memasangkan kamu dengan pembimbingmu secara resmi ke dalam sistem
                         </p>
-                        <Button className="mt-3">Template Chat</Button>
+                        <Button className="mt-3" onClick={() => copyChat(textMintaPembimbing)}>Template Chat</Button>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -93,7 +110,11 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Ikuti format penulisan yang ada pada guide book. Kalau masih bingung, lihat skripsi kating.
                         </p>
-                        <Button className="mt-3">Guide Book</Button>
+                        <Button className="mt-3">
+                            <Link href={"https://drive.google.com/file/d/16ZMuiPEHbvzfiw7clkk-X07GEoP_WASP/view?usp=sharing"} target="_blank">
+                                Guide Book
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -130,7 +151,6 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Jangan lupa mengisi data bimbingan di Sitedi. Hal ini penting untuk langkah kedepannya
                         </p>
-                        <Button className="mt-3">Template Chat</Button>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -139,7 +159,11 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Jika sudah disetujui pembimbing, minta tanda tangan dari dosen pembimbing yang menyatakan kamu sudah siap untuk mengikuti sempro
                         </p>
-                        <Button className="mt-3">Template Surat</Button>
+                        <Button className="mt-3">
+                            <Link href={"https://docs.google.com/document/d/1wnwPZ7ex_Bk--Xuy_DaW8MBNSki3d_J4bJE5QmwT5d0/edit?usp=sharing"} target="_blank">
+                                Template Surat
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -168,7 +192,11 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Gunakan template PPT yang clean, minimalis, rapih, dan tidak membingungkan. Pastikan kalian paham materi, supaya tidak plonga-plongo
                         </p>
-                        <Button className="mt-3">Referensi PPT Kating</Button>
+                        <Button className="mt-3">
+                            <Link href={"https://drive.google.com/drive/folders/1ZGv7nZMfNtFgvIj0nVKgf2Jp14sTPw5m?usp=sharing"} target="_blank">
+                                Referensi PPT Kating
+                            </Link>
+                        </Button>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -177,7 +205,11 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Scan surat persetujuan siap sempro dari langkah sebelumnya. Ini akan dibutuhkan oleh form pendaftaran.
                         </p>
-                        <Button className="mt-3">Google Form</Button>
+                        <Button className="mt-3">
+                            <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSeOde8soyTfuxbcCEN2CFtEOhfDZU-5yvnLCHStGmYEItp-lQ/viewform"} target="_blank">
+                                Google Form
+                            </Link>
+                        </Button>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -186,7 +218,7 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Chat ke Ketua Jurusan untuk dipilihkan dosen penguji. Mereka yang nantinya akan ngasih kamu nilai akhir skripsi
                         </p>
-                        <Button className="mt-3">Template Chat</Button>
+                        <Button className="mt-3" onClick={() => copyChat(textMintaPenguji)}>Template Chat</Button>
                     </div>
                 </div>
             </div>
@@ -215,7 +247,7 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
                         </p>
-                        <Button className="mt-3">Template Chat</Button>
+                        <Button className="mt-3" onClick={() => copyChat(textAturJadwalSempro)}>Template Chat</Button>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -224,7 +256,11 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Pesan ruangan bisa dilakukan melalui Google Form. Jangan lupa untuk konfirmasi ke pengurus Lab setelah mengisinya
                         </p>
-                        <Button className="mt-3">Google Form</Button>
+                        <Button className="mt-3">
+                            <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
+                                Google Form
+                            </Link>
+                        </Button>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
