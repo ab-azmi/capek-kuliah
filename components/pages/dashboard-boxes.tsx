@@ -5,8 +5,12 @@ import { Button } from "../ui/button"
 import Link from "next/link"
 import { Avatar, AvatarFallback } from "../ui/avatar"
 import Image from "next/image"
+import { berkasWajib } from "@/data/berkas-wajib"
+import { useState } from "react"
 
 export default function DashboardBoxes() {
+    const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
+
     return (
         <div className="flex gap-5">
             <div className="w-1/3 flex flex-col gap-5">
@@ -17,36 +21,17 @@ export default function DashboardBoxes() {
                         Siapkan dari awal karena sulit mendapatkannya
                     </p>
                     <div className="mt-5 flex flex-col gap-3">
-                        <div className="flex justify-between items-center">
-                            Sertifikat SNIK
-                            <Button size={'sm'}>
-                                <MessageCircle size={16} />
-                            </Button>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Sertifikat Kompre
-                            <Button size={'sm'} variant={'secondary'}>
-                                <MessageCircle size={16} />
-                            </Button>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Sertifikat TEOFL/TOPEL
-                            <Button size={'sm'} variant={'secondary'}>
-                                <MessageCircle size={16} />
-                            </Button>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Sertifikat Course
-                            <Button size={'sm'} variant={'secondary'}>
-                                <MessageCircle size={16} />
-                            </Button>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Ijazah SMA/SMK
-                            <Button size={'sm'} variant={'secondary'}>
-                                <MessageCircle size={16} />
-                            </Button>
-                        </div>
+                        {berkasWajib.map((berkas) => (
+                            <div key={berkas.id} className="flex justify-between items-center">
+                                {berkas.name}
+                                <Button 
+                                    onClick={() => setSelectedQna(berkas)}
+                                    size={'sm'} 
+                                    className={selectedQna.id != berkas.id ? 'bg-secondary text-primary' : 'bg-primary text-secondary'}>
+                                    <MessageCircle size={16} />
+                                </Button>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 {/* Joki */}
@@ -96,27 +81,30 @@ export default function DashboardBoxes() {
                             </AvatarFallback>
                         </Avatar>
                         <div>
-                            <h1 className="font-bold text-sm">Kating</h1>
+                            <h1 className="font-bold text-sm">Informan</h1>
                             <p className=" text-slate-400 text-sm">
-                                kating@students.unnes.ac.id
+                                informanqna@mail.unnes.ac.id
                             </p>
                         </div>
                     </div>
-                    <div className="mt-5 flex flex-col gap-5">
-                        <div className="bg-secondary rounded-r-lg rounded-tl-lg p-3 w-fit text-sm max-w-[80%]">
-                            Kak aku ga punya sertif SNIK
-                        </div>
-                        <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-slate-300 ml-auto p-3 w-fit text-sm max-w-[80%]">
-                            Coba cari info untuk ikut ya. Sertif SNIK itu wajib. Zero toleransi kalau ini
-                        </div>
-                        <div className="bg-secondary rounded-r-lg rounded-tl-lg p-3 w-fit text-sm max-w-[80%]">
-                            Itu bisa cek info dimana?
-                        </div>
-                        <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-slate-300 ml-auto p-3 w-fit text-sm max-w-[80%]">
-                            Coba tanya dosen atau cek website SNIK
-                        </div>
+                    <div className="mt-5 flex flex-col gap-5 h-[18rem] overflow-y-scroll">
+                        {selectedQna.qna.map((qna) => (
+                            <>
+                                {qna.type === 'question' && (
+
+                                    <div className="bg-secondary rounded-r-lg rounded-tl-lg p-3 w-fit text-sm max-w-[80%]">
+                                        {qna.message}
+                                    </div>
+                                )}
+                                {qna.type === 'answer' && (
+                                    <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-slate-300 ml-auto p-3 w-fit text-sm max-w-[80%]">
+                                        {qna.message}
+                                    </div>
+                                )}
+                            </>
+                        ))}
                     </div>
-                    <div className="mt-7 flex gap-3">
+                    <div className="mt-5 flex gap-3">
                         <div className="w-full border-2 rounded-lg h-10"></div>
                         <Button disabled>
                             <SendHorizonal size={18} />
@@ -210,7 +198,7 @@ export default function DashboardBoxes() {
                         <Link href={'https://www.mendeley.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/mendeley.png'} alt="Chatgpt" width={45} height={45} />
                         </Link>
-                       
+
                     </div>
                 </div>
             </div>
