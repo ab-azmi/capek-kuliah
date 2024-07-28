@@ -15,13 +15,13 @@ export const dosenTI = [
         name: "Florentina Yuni Arini S.Kom., M.Cs., Ph.D.",
         image:"",
         email: "floyuna@mail.unnes.ac.id",
-        badges: ["TI", "Mengajar", "NIP-197810252003122001"],
+        badges: ["TI", "Mengajar", "NIP-197810252003122001", "+62 815-7543-8654"],
     },
     {
         name: "Zaenal Abidin S.Si., M.Cs., Ph.D.",
         image:"https://simpeg.unnes.ac.id/index.php/simpeg_portofolio/load_photo/132308201",
         email: "z.abidin@mail.unnes.ac.id",
-        badges: ["TI", "Mengajar", "NIP-198205042005011001"],
+        badges: ["TI", "Mengajar", "NIP-198205042005011001", "+62 812-6559-2551"],
     },
     {
         name: "Riza Arifudin S.Pd., M.Cs.",
@@ -63,7 +63,7 @@ export const dosenTI = [
         name: "M. Faris Al Hakim S.Pd., M.Cs.",
         image:"https://simpeg.unnes.ac.id/index.php/simpeg_portofolio/load_photo/199203272022031003",
         email: "farishakim@mail.unnes.ac.id",
-        badges: ["TI", "Mengajar", "NIP-199203272022031003"],
+        badges: ["TI", "Mengajar", "NIP-199203272022031003", "+62 858-5264-6724"],
     },
     
 ]
