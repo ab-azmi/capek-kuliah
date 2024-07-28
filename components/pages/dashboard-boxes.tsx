@@ -90,7 +90,7 @@ export default function DashboardBoxes() {
                     </div>
                     <div className="mt-5 flex flex-col gap-5 h-[18rem] overflow-y-scroll">
                         {selectedQna.qna.map((qna) => (
-                            <div key={qna.message}>
+                            <div key={qna.id}>
                                 {qna.type === 'question' && (
 
                                     <div className="bg-secondary rounded-r-lg rounded-tl-lg p-3 w-fit text-sm max-w-[90%] lg:max-w-[80%]">
