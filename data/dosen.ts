@@ -57,7 +57,7 @@ export const dosenTI = [
         name: "Jumanto S.Kom., M.Cs.",
         image:"https://simpeg.unnes.ac.id/index.php/simpeg_portofolio/load_photo/199202072023211024",
         email: "jumanto@mail.unnes.ac.id",
-        badges: ["TI", "Mengajar", "NIP-199202072023211024"],
+        badges: ["TI", "Mengajar", "NIP-199202072023211024", "+62 813-3976-2820"],
     },
     {
         name: "M. Faris Al Hakim S.Pd., M.Cs.",

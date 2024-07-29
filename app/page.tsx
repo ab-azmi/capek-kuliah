@@ -22,7 +22,7 @@ export default function Home() {
           
             <Link href="/update-form" className={cn(buttonVariants(), 'text-xs lg:text-base w-full lg:w-fit')}>Request Update</Link>
             
-          <p className="text-slate-400 italic lg:text-base text-xs">Updated 28 juli 2024</p>
+          <p className="text-slate-400 italic lg:text-base text-xs">Updated 29 juli 2024</p>
         </div>
       </div>
 
