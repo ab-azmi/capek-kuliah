@@ -66,7 +66,7 @@ export default function PreWisuda() {
                             Revisi Skripsi Ke Penguji 1
                         </h1>
                         <p className="text-slate-400">
-                        Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
+                            Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
                         </p>
                         <Button className="mt-3" onClick={() => copyChat(textRevisiPenguji)}>
                             Template Chat
@@ -77,7 +77,7 @@ export default function PreWisuda() {
                             Revisi Skripsi Ke Penguji 2
                         </h1>
                         <p className="text-slate-400">
-                        Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
+                            Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
                         </p>
                         <Button className="mt-3" onClick={() => copyChat(textRevisiPenguji)}>
                             Template Chat
@@ -89,6 +89,14 @@ export default function PreWisuda() {
                         </h1>
                         <p className="text-slate-400">
                             Lapor ke pembimbing bahwa kamu sudah menyelesaikan tahap revisi. Jangan lupa minta TTD lembar pengesahan.                        </p>
+                    </div>
+                    <div className="border-2 rounded-lg p-5">
+                        <h1 className="text-2xl font-semibold">
+                            TTD Pengesahan Ke Sekretaris Jurusan
+                        </h1>
+                        <p className="text-slate-400">
+                            Minta tanda tangan ke sekretaris jurusan. TI dan SI berbeda. Perhatikan!
+                        </p>
                     </div>
                     <div className="border-2 rounded-lg p-5">
                         <h1 className="text-2xl font-semibold">
@@ -241,7 +249,7 @@ export default function PreWisuda() {
                             Mengisi Data Identitas Wisuda di Sikadu
                         </h1>
                         <p className=" text-slate-400">
-                        Isilah form pada menu Sikadu &rarr; Paska Perkuliahan &rarr; Upload Bukti Identitas Wisuda
+                            Isilah form pada menu Sikadu &rarr; Paska Perkuliahan &rarr; Upload Bukti Identitas Wisuda
                         </p>
                         <div className="mt-3 flex flex-col gap-3">
                             <CheckboxWithLabel label="Scan KTM" />
