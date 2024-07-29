@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster"
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Analytics/>
           {children}
           <Toaster/>
         </ThemeProvider>
