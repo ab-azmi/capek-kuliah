@@ -145,26 +145,26 @@ export default function DashboardBoxes() {
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    KH
+                                    PD
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">kudahitam</h1>
+                                <h1 className="font-bold text-sm">ProDebugger</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
-                                    kudahitam22@gmail.com
+                                aramadhan395@gmail.com
                                 </p>
                             </div>
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    BL
+                                    PB
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">BabiLapas</h1>
+                                <h1 className="font-bold text-sm">Pelerbabi884</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
-                                    balap24@gmail.com
+                                    azmi.kiva@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -175,9 +175,9 @@ export default function DashboardBoxes() {
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Kating</h1>
+                                <h1 className="font-bold text-sm">KatingUIUX</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
-                                    kating@gmail.com
+                                    kating.uiux@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -194,10 +194,13 @@ export default function DashboardBoxes() {
                             <Image src={'/images/cgpt.png'} alt="Chatgpt" width={45} height={45} />
                         </Link>
                         <Link href={'https://www.kaggle.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
-                            <Image src={'/images/kaggle.webp'} alt="Chatgpt" width={45} height={45} />
+                            <Image src={'/images/kaggle.webp'} alt="Kaggle" width={45} height={45} />
                         </Link>
                         <Link href={'https://www.mendeley.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
-                            <Image src={'/images/mendeley.png'} alt="Chatgpt" width={45} height={45} />
+                            <Image src={'/images/mendeley.png'} alt="Mendeley" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.figma.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/figma.png'} alt="Figma" width={30} height={30} />
                         </Link>
 
                     </div>
