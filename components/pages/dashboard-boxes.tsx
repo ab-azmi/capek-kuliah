@@ -119,16 +119,16 @@ export default function DashboardBoxes() {
                         Beberapa referensi untuk mencari artikel
                     </p>
                     <div className="mt-5 flex flex-col gap-3">
-                        <Link href="/jurnal" className="hover:underline">
+                        <Link href="https://ieeexplore.ieee.org/browse/periodicals/title" target="_blank" className="hover:underline">
                             IEEE
                         </Link>
-                        <Link href="/jurnal" className="hover:underline">
+                        <Link href="https://www.sciencedirect.com/browse/journals-and-books" target="_blank" className="hover:underline">
                             Science Direct
                         </Link>
-                        <Link href="/jurnal" className="hover:underline">
+                        <Link href="https://paperswithcode.com" target="_blank" className="hover:underline">
                             PapersWithCode
                         </Link>
-                        <Link href="/jurnal" className="hover:underline">
+                        <Link href="https://arxiv.org/archive/cs" target="_blank" className="hover:underline">
                             Arxiv
                         </Link>
                     </div>
