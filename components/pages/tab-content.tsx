@@ -21,7 +21,7 @@ export default function TabContent() {
                         <TabsTrigger value="pre-wisuda" className="text-xs md:text-base">Pre-Wisuda</TabsTrigger>
                     </TabsList>
                     <TabsContent value="pre-proposal">
-                        <PreProposal />
+                            <PreProposal />
                     </TabsContent>
                     <TabsContent value="pre-sidang">
                         <PreSidang />
