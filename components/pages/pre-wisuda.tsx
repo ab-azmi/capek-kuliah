@@ -216,7 +216,7 @@ export default function PreWisuda() {
                         </p>
                         <Link className={cn(buttonVariants(), 'mt-3')} href="https://s.id/bebasperpustakaanfmipa"
                             target="_blank">
-                            Form
+                            Google Form
                         </Link>
                     </RevealRightCard>
                     <RevealRightCard>
@@ -228,7 +228,7 @@ export default function PreWisuda() {
                         </p>
                         <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/forms/d/e/1FAIpQLSdpIwJR00PWjsQRp1OU5HGaDVBHJ2MJtFOLmsBREdd14P21Zg/viewform"
                             target="_blank">
-                            Form
+                            Google Form
                         </Link>
                     </RevealRightCard>
                     <RevealRightCard>
@@ -240,7 +240,7 @@ export default function PreWisuda() {
                         </p>
                         <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/forms/d/e/1FAIpQLSfdOOZ3X5OjALiN5o_3SK7hsjw1xPHCyqTqij1qFhfrKGozUw/viewform"
                             target="_blank">
-                            Form
+                            Google Form
                         </Link>
                     </RevealRightCard>
                     <RevealRightCard>
@@ -265,7 +265,7 @@ export default function PreWisuda() {
                         </p>
                         <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/forms/d/e/1FAIpQLScoEtGc8Gy4eAqo2TI3Y5Y2oIXvsqg8z3icxvoeZA4WXc3fRw/viewform"
                             target="_blank">
-                            Form
+                            Google Form
                         </Link>
                     </RevealRightCard>
                     <RevealRightCard>

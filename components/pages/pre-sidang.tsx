@@ -148,7 +148,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Surat ini berguna untuk mengajukan jadwal sidang. Butuh TTD oleh Ketua Jurusan dan Pembimbing
                         </p>
-                        <Link className={cn(buttonVariants(), 'mt-3')} href=" https://docs.google.com/document/d/1FXboqlttNonoPinSD--OQSSo2muvUpdqh5o1WZkryo/edit?usp=sharing" target="_blank">
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/1SAUGW2A2OBb2DcUiXpZqVvt7_K4KQcgNyLospTpkGzg/edit?usp=sharing" target="_blank">
                             Template Surat
                         </Link>
                     </RevealRightCard>
