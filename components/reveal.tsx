@@ -1,7 +1,7 @@
 import {delay, motion, useAnimation, useInView} from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-export function RevealLeftCard({children}: {children: React.ReactNode}) {
+export function RevealRightCard({children}: {children: React.ReactNode}) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -25,7 +25,7 @@ export function RevealLeftCard({children}: {children: React.ReactNode}) {
 
 }
 
-export function RevealRightCard({children}: {children: React.ReactNode}) {
+export function RevealLeftCard({children}: {children: React.ReactNode}) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 

@@ -11,7 +11,7 @@ export default function ScrollProgress() {
 
     return (
         <>
-            <motion.div className="w-full left-0 fixed opacity-70 bg-gradient-to-r from-slate-200 dark:from-slate-800 to-cyan-700 dark:to-cyan-700 h-3 bottom-3" style={{ scaleX }}>
+            <motion.div className="w-full left-0 fixed bg-primary h-2 bottom-2" style={{ scaleX }}>
             </motion.div>
         </>
     )

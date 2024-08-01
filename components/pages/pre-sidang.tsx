@@ -4,6 +4,7 @@ import { Button, buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
 import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
+import { RevealLeftCard, RevealRightCard } from "../reveal";
 
 export default function PreSidang() {
     const { toast } = useToast();
@@ -24,7 +25,7 @@ export default function PreSidang() {
         <div>
             {/* 6 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             6
@@ -38,17 +39,17 @@ export default function PreSidang() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Revisi Proposal dan Menulis Bab 4 & 5
                         </h1>
                         <p className=" text-slate-400">
                             Untuk mengikuti sidang skripsi, kamu harus melakukan bimbingan sebanyak 12x. Jangan lupa input data bimbingan ke Sitedi.
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Bisa Mulai Menulis Artikel Di tahap ini
                         </h1>
@@ -56,12 +57,12 @@ export default function PreSidang() {
                             Selain menulis Bab 4 dan 5, kamu juga bisa mulai menulis artikel skripsi disini. Atau bisa juga nanti setelah sidang.
                         </p>
 
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 7 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             7
@@ -75,9 +76,9 @@ export default function PreSidang() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Surat Persetujuan Pembimbing
                         </h1>
@@ -88,8 +89,8 @@ export default function PreSidang() {
                             target="_blank">
                             Template Surat
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Atur Jadwal Pertemuan Sidang
                         </h1>
@@ -99,12 +100,12 @@ export default function PreSidang() {
                         <Button className="mt-3" onClick={() => copyChat(textAturJadwalSidang)}>
                             Template Chat
                         </Button>
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 8 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             8
@@ -118,9 +119,9 @@ export default function PreSidang() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Persiapan Berkas
                         </h1>
@@ -139,8 +140,8 @@ export default function PreSidang() {
                             <CheckboxWithLabel label="Scan Sertifikat Kompre" />
                             <CheckboxWithLabel label="Scan SK Pembimbing" />
                         </div>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Surat Usulan Pengujian
                         </h1>
@@ -150,8 +151,8 @@ export default function PreSidang() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href=" https://docs.google.com/document/d/1FXboqlttNonoPinSD--OQSSo2muvUpdqh5o1WZkryo/edit?usp=sharing" target="_blank">
                             Template Surat
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Surat Rekap Bimbingan
                         </h1>
@@ -161,8 +162,8 @@ export default function PreSidang() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/1mqtPC7_-ZKVEQl1UIwa2PYCFxPHPtQJQl5Q-lnn4_bw/edit?usp=sharing" target="_blank">
                             Template Surat
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Surat Identitas
                         </h1>
@@ -172,8 +173,8 @@ export default function PreSidang() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={'https://docs.google.com/document/d/1aKK7pkVcHEKuO_cbcwilPoVr-dN9h3_9wRji-DuVWiQ/edit?usp=sharing'} target="_blank">
                             Template Surat
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Submit Skripsi Kalian ke Turnitin UNNES
                         </h1>
@@ -183,12 +184,12 @@ export default function PreSidang() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={'https://docs.google.com/forms/d/e/1FAIpQLScSTUmBRdza0zl2Nu-O8Botlg9-zQp83FkP_i9RP_-jdKOZ1A/viewform'} target="_blank">
                             Google Form
                         </Link>
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 9 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             9
@@ -202,9 +203,9 @@ export default function PreSidang() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Mengisi Form Pendaftaran Sidang
                         </h1>
@@ -214,8 +215,8 @@ export default function PreSidang() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href="http://bit.ly/daftarujianilkom" target="_blank">
                             Google Form
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Konfirmasi ke Ketua Jurusan
                         </h1>
@@ -225,8 +226,8 @@ export default function PreSidang() {
                         <Button className="mt-3" onClick={() => copyChat(textKonfirmasiSidang)}>
                             Template Chat
                         </Button>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Pemesanan Ruang Sidang
                         </h1>
@@ -236,12 +237,12 @@ export default function PreSidang() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
                             Google Form
                         </Link>
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 10 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             10
@@ -255,9 +256,9 @@ export default function PreSidang() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Perisapan Sidang
                         </h1>
@@ -270,23 +271,23 @@ export default function PreSidang() {
                             <CheckboxWithLabel label="Alat Tulis" />
                             <CheckboxWithLabel label="Cetak file Berkas Ujian" />
                         </div>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             H-1 Sidang
                         </h1>
                         <p className=" text-slate-400">
                             Jangan lupa untuk mengingatkan Dosen terkait jadwal sidang mu. Supaya mereka tidak lupa
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Sidang
                         </h1>
                         <p className=" text-slate-400">
                             Semarangat sidangnya !
                         </p>
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
         </div>

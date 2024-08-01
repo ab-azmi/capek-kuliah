@@ -4,8 +4,7 @@ import { Button } from "../ui/button";
 import { useToast } from "@/components/ui/use-toast"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils";
-import { motion } from 'framer-motion';
-import { RevealLeftCard, RevealRightCard } from "../reveal";
+import { RevealRightCard, RevealLeftCard } from "../reveal";
 
 
 export default function PreProposal() {
@@ -29,7 +28,7 @@ export default function PreProposal() {
         <div>
             {/* 1 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <RevealRightCard>
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             1
@@ -43,10 +42,10 @@ export default function PreProposal() {
                             </p>
                         </div>
                     </div>
-                </RevealRightCard>
+                </RevealLeftCard>
                 <div 
                     className="col-span-2 flex flex-col gap-4">
-                    <RevealLeftCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Pilih 1 dosen pembimbing
                         </h1>
@@ -56,8 +55,8 @@ export default function PreProposal() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={'/dosen'} target="_blank">
                             List Dosen ILKOM
                         </Link>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Rencanakan Skripsi
                         </h1>
@@ -73,12 +72,12 @@ export default function PreProposal() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/drive/folders/1n2e53N97p_uQcralIwHUuALn8JiLQ34M?usp=sharing"} target="_blank">
                             Skripsi Kating
                         </Link>
-                    </RevealLeftCard>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 2 */}
             <div  className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <RevealRightCard>
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             2
@@ -92,18 +91,18 @@ export default function PreProposal() {
                             </p>
                         </div>
                     </div>
-                </RevealRightCard>
+                </RevealLeftCard>
                 <div 
                     className="col-span-2 flex flex-col gap-4">
-                    <RevealLeftCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Submit judul dan topik di Sitedi
                         </h1>
                         <p className=" text-slate-400">
                             Hal ini adalah tanda bahwa kamu sudah yakin dengan judulmu dan akan lanjut ke tahap bimbingan rutin
                         </p>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Minta SK Pembimbing ke Ketua Jurusan (Kajur)
                         </h1>
@@ -111,8 +110,8 @@ export default function PreProposal() {
                             Langkah ini bertujuan untuk memasangkan kamu dengan pembimbingmu secara resmi ke dalam sistem
                         </p>
                         <Button className="mt-3" onClick={() => copyChat(textMintaPembimbing)}>Template Chat</Button>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Menulis Bab 1 sampai 3 Proposal
                         </h1>
@@ -122,12 +121,12 @@ export default function PreProposal() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/file/d/16ZMuiPEHbvzfiw7clkk-X07GEoP_WASP/view?usp=sharing"} target="_blank">
                             Guide Book
                         </Link>
-                    </RevealLeftCard>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 3 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <RevealRightCard>
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             3
@@ -141,25 +140,25 @@ export default function PreProposal() {
                             </p>
                         </div>
                     </div>
-                </RevealRightCard>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <RevealLeftCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Bimbingan sampai disetujui Sempro
                         </h1>
                         <p className=" text-slate-400">
                             Biasanya tiap pembimbing memiliki grup yang berisi anak-anak bimbingannya. Kalau tidak ada grup, jangan sungkan untuk chat privat. Yang penting sopan.
                         </p>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Mengisi data bimbingan di Sitedi
                         </h1>
                         <p className=" text-slate-400">
                             Jangan lupa mengisi data bimbingan di Sitedi. Hal ini penting untuk langkah kedepannya
                         </p>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Surat Persetujuan Siap Sempro
                         </h1>
@@ -169,12 +168,12 @@ export default function PreProposal() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://docs.google.com/document/d/1wnwPZ7ex_Bk--Xuy_DaW8MBNSki3d_J4bJE5QmwT5d0/edit?usp=sharing"} target="_blank">
                             Template Surat
                         </Link>
-                    </RevealLeftCard>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 4 */}
             <div  className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <RevealRightCard>
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             4
@@ -188,9 +187,9 @@ export default function PreProposal() {
                             </p>
                         </div>
                     </div>
-                </RevealRightCard>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <RevealLeftCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Siapkan PPT Untuk Sempro
                         </h1>
@@ -200,8 +199,8 @@ export default function PreProposal() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/drive/folders/1ZGv7nZMfNtFgvIj0nVKgf2Jp14sTPw5m?usp=sharing"} target="_blank">
                             Referensi PPT Kating
                         </Link>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Daftar Sempro via Google Form
                         </h1>
@@ -213,8 +212,8 @@ export default function PreProposal() {
                                 Google Form
                             </Link>
                         </Button>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Minta Dipilihkan Dosen Penguji ke Kajur
                         </h1>
@@ -222,12 +221,12 @@ export default function PreProposal() {
                             Chat ke Ketua Jurusan untuk dipilihkan dosen penguji. Mereka yang nantinya akan ngasih kamu nilai akhir skripsi
                         </p>
                         <Button className="mt-3" onClick={() => copyChat(textMintaPenguji)}>Template Chat</Button>
-                    </RevealLeftCard>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 5 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <RevealRightCard>
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             5
@@ -241,9 +240,9 @@ export default function PreProposal() {
                             </p>
                         </div>
                     </div>
-                </RevealRightCard>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <RevealLeftCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Atur Jadwal Pertemuan Seminar
                         </h1>
@@ -251,8 +250,8 @@ export default function PreProposal() {
                             Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
                         </p>
                         <Button className="mt-3" onClick={() => copyChat(textAturJadwalSempro)}>Template Chat</Button>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Pesan Ruangan untuk Sempro
                         </h1>
@@ -262,23 +261,23 @@ export default function PreProposal() {
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://docs.google.com/forms/d/e/1FAIpQLSerrc_Rosgy3LhtpKBSkJBZp7LM52Sf57ng1KS8w7-bEi4wcg/viewform?usp=send_form"} target="_blank">
                             Google Form
                         </Link>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             H-2 Sempro
                         </h1>
                         <p className=" text-slate-400">
                             Ingatkan Dosen penguji dan pembimbing tentang jadwal Sempro. Tanyakan juga apakah mereka butuh file cetak atau cukup soft file.
                         </p>
-                    </RevealLeftCard>
-                    <RevealLeftCard>
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Sempro
                         </h1>
                         <p className=" text-slate-400">
                             Siapkan Snack, Minum, ATK, dan keperluan lain sehari sebelum sempro. Semangat dan jangan plonga-plongo.
                         </p>
-                    </RevealLeftCard>
+                    </RevealRightCard>
                 </div>
             </div>
         </div>
