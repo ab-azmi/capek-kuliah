@@ -8,6 +8,7 @@ import Image from "next/image"
 import { berkasWajib } from "@/data/berkas-wajib"
 import { useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
+import { motion } from 'framer-motion'
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -16,7 +17,10 @@ export default function DashboardBoxes() {
         <div className="flex-col lg:flex-row flex gap-5">
             <div className="w-full lg:w-1/3 flex lg:flex-col flex-col-reverse gap-5">
                 {/* Berkas Wajib */}
-                <div className="border-2 rounded-lg p-3 lg:p-5">
+                <motion.div 
+                    initial={{y: -60, x: -60, opacity: 0}}
+                    animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.2}}}
+                    className="border-2 rounded-lg p-3 lg:p-5">
                     <h1 className="font-bold text-xl lg:text-2xl">Berkas Wajib</h1>
                     <p className=" text-slate-400 text-sm lg:text-base">
                         Siapkan dari awal karena sulit mendapatkannya
@@ -34,9 +38,12 @@ export default function DashboardBoxes() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
                 {/* Joki */}
-                <div className="border-2 rounded-lg p-3 lg:p-5 h-full">
+                <motion.div 
+                 initial={{y: 60, x: -60, opacity: 0}}
+                 animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
+                    className="border-2 rounded-lg p-3 lg:p-5 h-full">
                     <h1 className="font-bold text-xl lg:text-2xl">Jasa Joki</h1>
                     <p className=" text-slate-400 lg:text-base text-sm">
                         Kalau mau instan, bisa cek di bawah ini
@@ -70,11 +77,14 @@ export default function DashboardBoxes() {
                     <p className="text-slate-400 mt-2 text-xs lg:text-sm italic">
                         *beda tipe beda harga ya
                     </p>
-                </div>
+                </motion.div>
             </div>
             <div className="w-full lg:w-1/3 flex flex-col gap-5">
                 {/* QnA */}
-                <div className="border-2 rounded-lg p-3 lg:p-5">
+                <motion.div 
+                    initial={{y: -60, opacity: 0}}
+                    animate={{y: 0, opacity: 1, transition: {duration: 0.3, delay: 0.5}}}
+                    className="border-2 rounded-lg p-3 lg:p-5">
                     <div className="flex gap-3 items-center">
                         <Avatar>
                             <AvatarFallback>
@@ -111,9 +121,12 @@ export default function DashboardBoxes() {
                             <SendHorizonal size={18} />
                         </Button>
                     </div>
-                </div>
+                </motion.div>
                 {/* Referensi Jurnal */}
-                <div className="border-2 rounded-lg p-3 lg:p-5">
+                <motion.div 
+                    initial={{y: 60, opacity: 0}}
+                    animate={{y: 0, opacity: 1, transition: {duration: 0.5, delay: 0.3}}}
+                    className="border-2 rounded-lg p-3 lg:p-5">
                     <h1 className="font-bold text-xl lg:text-2xl">Referensi Artikel</h1>
                     <p className=" text-slate-400 text-sm lg:text-base">
                         Beberapa referensi untuk mencari artikel
@@ -132,11 +145,14 @@ export default function DashboardBoxes() {
                             Arxiv
                         </Link>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className="w-full lg:w-1/3 flex flex-col gap-5">
                 {/* Dev Team */}
-                <div className="border-2 rounded-lg p-3 lg:p-5">
+                <motion.div 
+                    initial={{y: -60, x: 60, opacity: 0}}
+                    animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
+                    className="border-2 rounded-lg p-3 lg:p-5">
                     <h1 className="font-bold text-xl lg:text-2xl">Dev Team</h1>
                     <p className=" text-slate-400 text-sm lg:text-base">
                         Selaku dev team sangat berterimakasih & senang bisa bantu kalian. Kalau ada yg keliru, hubungi saja ya
@@ -182,9 +198,12 @@ export default function DashboardBoxes() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* TOol Helper */}
-                <div className="border-2 rounded-lg p-3 lg:p-5 h-full">
+                <motion.div 
+                    initial={{y: 60, x: 60, opacity: 0}}
+                    animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.2}}}
+                    className="border-2 rounded-lg p-3 lg:p-5 h-full">
                     <h1 className="font-bold lg:text-2xl text-xl">Tools Helper Skripsian</h1>
                     <p className=" text-slate-400 text-sm lg:text-sm">
                         Beberapa Tool yang bisa bantu kamu skripsian
@@ -204,7 +223,7 @@ export default function DashboardBoxes() {
                         </Link>
 
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

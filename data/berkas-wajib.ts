@@ -153,12 +153,12 @@ export const berkasWajib = [
             },
             {
                 id: 7,
-                message: "Kalau sertifikat MSIB dari Bangkit bisa ga Pak?",
+                message: "Kalau course MSIB seperti Bangkit bisa ga Pak?",
                 type: 'question'
             },
             {
                 id: 8,
-                message: "Ada sertifikatnya ngga? Kalo ada ya boleh. Mikir dong",
+                message: "Ada sertifikatnya ngga? Kalo ada ya boleh. Mikir mas",
                 type: 'answer'
             },
             {
