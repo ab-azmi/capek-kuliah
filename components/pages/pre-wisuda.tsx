@@ -4,6 +4,7 @@ import { Button, buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
 import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
+import { RevealLeftCard, RevealRightCard } from "../reveal";
 
 export default function PreWisuda() {
     const { toast } = useToast();
@@ -25,7 +26,7 @@ export default function PreWisuda() {
         <div>
             {/* 11 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             11
@@ -39,17 +40,17 @@ export default function PreWisuda() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Bisa Mulai Menulis Artikel Di Sini
                         </h1>
                         <p className="text-slate-400">
                             Setelah skripsi selesai direvisi. Bisa lanjut menulis Artikel Di sini
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Siapkan Lembar Pengesahan
                         </h1>
@@ -60,8 +61,8 @@ export default function PreWisuda() {
                             target="_blank">
                             Template Surat
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Revisi Skripsi Ke Penguji 1
                         </h1>
@@ -71,8 +72,8 @@ export default function PreWisuda() {
                         <Button className="mt-3" onClick={() => copyChat(textRevisiPenguji)}>
                             Template Chat
                         </Button>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Revisi Skripsi Ke Penguji 2
                         </h1>
@@ -82,45 +83,43 @@ export default function PreWisuda() {
                         <Button className="mt-3" onClick={() => copyChat(textRevisiPenguji)}>
                             Template Chat
                         </Button>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             TTD Pengesahan Ke Pembimbing
                         </h1>
                         <p className="text-slate-400">
                             Lapor ke pembimbing bahwa kamu sudah menyelesaikan tahap revisi. Jangan lupa minta TTD lembar pengesahan.                        </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             TTD Pengesahan Ke Sekretaris Jurusan
                         </h1>
                         <p className="text-slate-400">
                             Minta tanda tangan ke sekretaris jurusan. TI dan SI berbeda. Perhatikan!
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Submit Artikel Ke Jurnal
                         </h1>
                         <p className="text-slate-400">
                             Biasanya kalau TI submit di RJI, sedangkan SI submit di JAIST. Tapi coba tanyakan dulu ke pembimbing masing-masing
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             TTD Pengesahan Ketua Penguji di Dekanat
                         </h1>
                         <p className="text-slate-400">
                             Serahkan lembar pengesahan dan Berkas Ujian yang telah ditandatangani full. Serahkan ke “Layanan MIPA” di dekanat. Biasanya bisa diambil lagi setelah 1 hari kerja
                         </p>
-                    </div>
-
-
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 12 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             12
@@ -134,9 +133,9 @@ export default function PreWisuda() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Submit File Pendukung di Sitedi
                         </h1>
@@ -154,44 +153,44 @@ export default function PreWisuda() {
                             <CheckboxWithLabel label="Bukti Submission Artikel" />
                             <CheckboxWithLabel label="Lembar Pengesahan yang dicap" />
                         </div>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Temui Kajur & Mengakhiri Masa Revisi
                         </h1>
                         <p className=" text-slate-400">
                             Temui Ketua Jurusan untuk memvalidasi nilai dan mengakhiri masa pengerjaan skripsi kamu.
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Donasi Buku Baru seharga Rp50k++
                         </h1>
                         <p className=" text-slate-400">
                             Siapkan Buku baru dengan harga diatas 50 Ribu. Simpan notanya. Isi buku sesuaikan dengan jurusan masing-masing. Jangan random
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Surat Identitas
                         </h1>
                         <p className=" text-slate-400">
                             Surat ini isinya identitas kalian. Udah, itu aja
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Serahkan Skripsi & Buku Donasi ke Perpus MIPA
                         </h1>
                         <p className=" text-slate-400">
                             Lokasi perpus di D3 Lt 1.
                         </p>
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 13 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
-                <div className="bg-primary rounded-lg p-5 h-fit">
+                <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             13
@@ -206,9 +205,9 @@ export default function PreWisuda() {
                         </div>
 
                     </div>
-                </div>
+                </RevealLeftCard>
                 <div className="col-span-2 flex flex-col gap-4">
-                    <div className="border-2 rounded-lg p-5">
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Isi Google Form Bebas Perpustakaan MIPA
                         </h1>
@@ -219,8 +218,8 @@ export default function PreWisuda() {
                             target="_blank">
                             Form
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Form Bebas Perpustakaan Rumah Ilmu
                         </h1>
@@ -231,8 +230,8 @@ export default function PreWisuda() {
                             target="_blank">
                             Form
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Form Bebas Laboratorium
                         </h1>
@@ -243,8 +242,8 @@ export default function PreWisuda() {
                             target="_blank">
                             Form
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Mengisi Data Identitas Wisuda di Sikadu
                         </h1>
@@ -256,8 +255,8 @@ export default function PreWisuda() {
                             <CheckboxWithLabel label="Scan Ijazah SMA/SMK" />
                             <CheckboxWithLabel label="Pass foto 3x4 (Perhatikan ketentuannya)" />
                         </div>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Isi Google Form SBVT
                         </h1>
@@ -268,16 +267,16 @@ export default function PreWisuda() {
                             target="_blank">
                             Form
                         </Link>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Temui Ketua Jurusan Untuk Konfirmasi SBVT
                         </h1>
                         <p className=" text-slate-400">
                             Temui Ketua Jurusan dan bilang bahwa kamu sudah mengisi Form SBVT
                         </p>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Pamitan di Grup Keluarga Besar TI
                         </h1>
@@ -287,12 +286,12 @@ export default function PreWisuda() {
                         <Button className="mt-3" onClick={() => copyChat(textPamitGrup)}>
                             Template Chat
                         </Button>
-                    </div>
-                    <div className="border-2 rounded-lg p-5">
+                    </RevealRightCard>
+                    <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
                             Selesai. Kamu Lulus
                         </h1>
-                    </div>
+                    </RevealRightCard>
                 </div>
             </div>
 

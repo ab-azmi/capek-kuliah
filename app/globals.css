@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
