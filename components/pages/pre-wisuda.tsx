@@ -115,6 +115,14 @@ export default function PreWisuda() {
                             Serahkan lembar pengesahan dan Berkas Ujian yang telah ditandatangani full. Serahkan ke “Layanan MIPA” di dekanat. Biasanya bisa diambil lagi setelah 1 hari kerja
                         </p>
                     </RevealRightCard>
+                    <RevealRightCard>
+                        <h1 className="text-2xl font-semibold">
+                            Cap Lembar Pengesahan di Dekanat
+                        </h1>
+                        <p className="text-slate-400">
+                            Saat mengambil lembar pengesahan, jangan lupa untuk mencapnya di dekanat. Pastikan sudah di SCAN atau DUPLIKAT lembar pengesahan terlebih dahulu. Takutnya ada kesalahan
+                        </p>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 12 */}
@@ -172,10 +180,10 @@ export default function PreWisuda() {
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
-                            Surat Identitas
+                            Cetak Skripsi Hard Cover
                         </h1>
                         <p className=" text-slate-400">
-                            Surat ini isinya identitas kalian. Udah, itu aja
+                            Disarankan cetak di percetakan MIPA di bawah tangga, samping D5. Orangnya sudah paham & pengalamannya bagus
                         </p>
                     </RevealRightCard>
                     <RevealRightCard>
