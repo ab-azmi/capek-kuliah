@@ -101,14 +101,6 @@ export default function PreWisuda() {
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
-                            Submit Artikel Ke Jurnal
-                        </h1>
-                        <p className="text-slate-400">
-                            Biasanya kalau TI submit di RJI, sedangkan SI submit di JAIST. Tapi coba tanyakan dulu ke pembimbing masing-masing
-                        </p>
-                    </RevealRightCard>
-                    <RevealRightCard>
-                        <h1 className="text-2xl font-semibold">
                             TTD Pengesahan Ketua Penguji di Dekanat
                         </h1>
                         <p className="text-slate-400">
@@ -131,6 +123,48 @@ export default function PreWisuda() {
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
                             12
+                        </div>
+                        <div>
+                            <h1 className="text-2xl text-secondary font-bold">
+                                Submit Artikel ke Jurnal
+                            </h1>
+                            <p className="text-slate-400">
+                                Pastikan sudah tau mau submit di jurnal mana
+                            </p>
+                        </div>
+                    </div>
+                </RevealLeftCard>
+                <div className="col-span-2 flex flex-col gap-4">
+                    
+                    <RevealRightCard>
+                    <h1 className="text-2xl font-semibold">
+                            Keterangan review Artikel by Pembimbing
+                        </h1>
+                        <p className="text-slate-400">
+                            Sebelum submit jurnal, perlu minta keterangan bahwa artikel sudah direview oleh pembimbing.
+                        </p>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/19xccOgqrzvkq_ME4CiU7r4GQuZ2Kfjpx/edit?usp=sharing&ouid=111143122275288922275&rtpof=true&sd=true"
+                            target="_blank">
+                            Template Surat
+                        </Link>
+                    </RevealRightCard>
+                    <RevealRightCard>
+                        <h1 className="text-2xl font-semibold">
+                            Submit Artikel Ke Jurnal
+                        </h1>
+                        <p className="text-slate-400">
+                            Biasanya kalau TI submit di RJI, sedangkan SI submit di JAIST. Tapi coba tanyakan dulu ke pembimbing masing-masing
+                        </p>
+                    </RevealRightCard>
+                    
+                </div>
+            </div>
+            {/* 13 */}
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
+                <RevealLeftCard>
+                    <div className="flex gap-3">
+                        <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
+                            13
                         </div>
                         <div>
                             <h1 className="text-2xl text-secondary font-bold">
@@ -196,12 +230,12 @@ export default function PreWisuda() {
                     </RevealRightCard>
                 </div>
             </div>
-            {/* 13 */}
+            {/* 14 */}
             <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
-                            13
+                            14
                         </div>
                         <div>
                             <h1 className="text-2xl text-secondary font-bold">
