@@ -2,6 +2,7 @@ import DashboardBoxes from "@/components/pages/dashboard-boxes";
 import TabContent from "@/components/pages/tab-content";
 import HomeTitle from "@/components/home-title";
 import ScrollProgress from "@/components/scroll-progress";
+import ColyAqu from "@/components/coly-aqu";
 
 
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* Main Content */}
       <TabContent />
+
+      {/* COLY AQU (CommonLY Ask QUestion)*/}
+      <ColyAqu/>
 
       {/* footer */}
       <footer className="flex justify-center">
