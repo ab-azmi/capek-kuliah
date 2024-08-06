@@ -6,7 +6,7 @@ const ColyAqu = () => {
     return (
         <div className="flex flex-col gap-y-5">
             <div>
-                <h1 className="text-xl lg:text-2xl font-bold">COLY AQU (Commonly Ask Questions)</h1>
+                <h1 className="text-xl lg:text-2xl font-bold">COLY AQU (Commonly Asked Questions)</h1>
                 <p className="text-sm lg:text-lg text-slate-400">
                     Beberapa pertanyaan yang sering ditanyakan teman-teman
                 </p>
