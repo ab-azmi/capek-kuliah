@@ -51,7 +51,7 @@ export const berkasWajib = [
             },
             {
                 id: 3,
-                message: 'Klo ga lulus gimana bang?',
+                message: 'Klo tak lulus gimana bang?',
                 type: 'question'
             },
             {
@@ -61,7 +61,7 @@ export const berkasWajib = [
             },
             {
                 id: 5,
-                message: 'Oke bang. thanks. jadi futsal bang?',
+                message: 'Oke bang. thanks. Jadi futsal bang?',
                 type: 'question'
             },
             {
