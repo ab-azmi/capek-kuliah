@@ -8,10 +8,10 @@ const commonQuestions = [
         id: 1,
         question: 'Proses submit artikel di RJI gimana?',
         answer: `
-            Submit ke RJI https://journal.unnes.ac.id/sju/index.php/rji ->
+            Kirim artikel ke Pak Abas dan bilang ingin submit di RJI ->
+            Jika disetujui, Submit ke RJI https://journal.unnes.ac.id/sju/index.php/rji ->
             Isi http://bit.ly/keteranganRJI ->
-            Konfirmasi ke Pak Abas bahwa sudah submit & kirim file artikelnya juga ->
-            JIka dikonfirm pak Abas, lanjut konfirm ke Pak Yahya ->
+            Lalu lanjut konfirm ke Pak Yahya ->
             Nunggu dapat email
         `
     },
