@@ -192,7 +192,7 @@ export default function PreWisuda() {
                             <CheckboxWithLabel label="Bab 4" />
                             <CheckboxWithLabel label="Bab 5" />
                             <CheckboxWithLabel label="Lampiran" />
-                            <CheckboxWithLabel label="Bukti Submission Artikel" />
+                            <CheckboxWithLabel label="Surat Bukti Submission atau File Artikel yang sudah terpublis" />
                             <CheckboxWithLabel label="Lembar Pengesahan yang dicap" />
                         </div>
                     </RevealRightCard>

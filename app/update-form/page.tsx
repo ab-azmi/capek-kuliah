@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
+    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -13,15 +14,16 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { SendHorizonal } from "lucide-react"
+import { SendHorizonal, Terminal } from "lucide-react"
 import { formSchema } from "@/types/update-form-schema"
 import sendEmailAction from "@/actions/send-email"
 import { useAction } from "next-safe-action/hooks"
 import { useToast } from "@/components/ui/use-toast"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 
 export default function UpdateForm() {
-    const {toast} = useToast();
+    const { toast } = useToast();
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -41,7 +43,7 @@ export default function UpdateForm() {
                 form.reset();
             }
             if (res?.data?.error) {
-                
+
             }
         }
 
@@ -53,16 +55,16 @@ export default function UpdateForm() {
 
     return (
         <main className="flex min-h-screen flex-col gap-8 lg:gap-14 px-4 md:px-20 lg:px-36 py-5 lg:py-20">
-            <div className="flex flex-col gap-5 justify-center items-center">
-                <div>
+            <div className="flex flex-col gap-2 justify-center items-center">
+            
                     <h1 className="text-xl lg:text-3xl font-bold">Terimakasih atas masukan dan sarannya</h1>
                     <p className="text-sm lg:text-lg text-slate-400">
                         Anda telah menolong sesama mahasiswa dalam menggarap skripsi mereka
                     </p>
-                </div>
+                
             </div>
 
-            <div className="max-w-2xl w-[60%] self-center">
+            <div className="w-full md:max-w-2xl md:w-[60%] self-center">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                         <FormField
@@ -70,9 +72,9 @@ export default function UpdateForm() {
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Your Name</FormLabel>
+                                    <FormLabel>Nama sesuai KTP</FormLabel>
                                     <FormControl>
-                                        <Input autoComplete="{false}" placeholder="geprek" {...field} />
+                                        <Input autoComplete="{false}" placeholder="Geprek S.Kom" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -83,11 +85,14 @@ export default function UpdateForm() {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Your Email</FormLabel>
+                                    <FormLabel>Email</FormLabel>
                                     <FormControl>
                                         <Input autoComplete="{false}" type="email" placeholder="geprek@seblak.com" {...field} />
                                     </FormControl>
                                     <FormMessage />
+                                    <FormDescription>
+                                        *Jika ingin bertanya, sertakan <span className="font-bold">Email asli</span> agar kami bisa menjawab
+                                    </FormDescription>
                                 </FormItem>
                             )}
                         />
@@ -96,7 +101,7 @@ export default function UpdateForm() {
                             name="message"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Message</FormLabel>
+                                    <FormLabel>Pesan</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             placeholder="Kasih tau kami apa yang ingin kamu sampaikan"
@@ -109,7 +114,7 @@ export default function UpdateForm() {
                             )}
                         />
                         <Button>
-                            {status === "executing" ? "Mengirim..." : "Kirim Pesan"} 
+                            {status === "executing" ? "Mengirim..." : "Kirim Pesan"}
                             <SendHorizonal className="w-5 h-5 ml-2" />
                         </Button>
                     </form>

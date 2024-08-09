@@ -3,6 +3,7 @@ import TabContent from "@/components/pages/tab-content";
 import HomeTitle from "@/components/home-title";
 import ScrollProgress from "@/components/scroll-progress";
 import ColyAqu from "@/components/coly-aqu";
+import HelpDesk from "@/components/help-desk";
 
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* COLY AQU (CommonLY Ask QUestion)*/}
       <ColyAqu/>
+
+      {/* Helpdesk */}
+      <HelpDesk/>
 
       {/* footer */}
       <footer className="flex justify-center">

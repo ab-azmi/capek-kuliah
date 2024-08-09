@@ -21,6 +21,11 @@ const commonQuestions = [
         answer: 'belum tau'
     },
     {
+        id: 7,
+        question: 'Untuk File pendukung, yang diupload itu file artikel atau bukti submission?',
+        answer: 'Sebenarnya keduanya bisa. Tapi biasanya kan untuk publish artikel waktunya agak lama, ada review, revisi, dll. Jadi kalau mau cepat, yang diupload adalah bukti submission'
+    },
+    {
         id: 4,
         question: 'Buku yang disumbang buat perpus topiknya bebas atau sesuai topik skripsi?',
         answer: 'Tidak harus sesuai topik skripsi, tetapi harus sesuai dengan Jurusan. Jangan sumbang buku resep masakan!'
