@@ -32,6 +32,11 @@ export const berkasWajib = [
                 id: 6,
                 message: 'Coba tanya dosen atau cek website SNIK',
                 type: 'answer'
+            },
+            {
+                id: 7,
+                message: 'Ok kak. Terimakasih',
+                type: 'question'
             }
         ]
     },

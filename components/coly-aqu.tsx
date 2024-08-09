@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./
 const ColyAqu = () => {
 
     return (
-        <div className="flex flex-col gap-y-5">
+        <div className="flex flex-col gap-y-5" id="colyaqu">
             <div>
                 <h1 className="text-xl lg:text-2xl font-bold">COLY AQU (Commonly Asked Questions)</h1>
                 <p className="text-sm lg:text-lg text-slate-400">

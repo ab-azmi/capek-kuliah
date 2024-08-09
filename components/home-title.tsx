@@ -48,7 +48,7 @@ export default function HomeTitle() {
 
                 <ModeToggle />
 
-                <p className="text-slate-400 italic lg:text-base text-xs">Updated 08 Agustus 2024</p>
+                <p className="text-slate-400 italic lg:text-base text-xs">Updated 10 Agustus 2024</p>
             </motion.div>
         </>
     )
