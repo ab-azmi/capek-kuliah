@@ -8,7 +8,7 @@ import HelpDesk from "@/components/help-desk";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col gap-8 lg:gap-14 px-4 md:px-20 lg:px-36 py-5 lg:py-20 relative">
+    <main className="flex min-h-screen flex-col gap-8 lg:gap-14 px-4 md:px-20 lg:px-36 py-5 lg:py-20 relative overflow-hidden">
       <ScrollProgress />
       <div className="flex flex-col-reverse lg:flex-row  justify-between items-center gap-5">
         {/* Home Title */}
