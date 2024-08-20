@@ -293,7 +293,7 @@ export default function PreWisuda() {
                             Isilah form pada menu Sikadu &rarr; Paska Perkuliahan &rarr; Upload Bukti Identitas Wisuda
                         </p>
                         <div className="mt-3 flex flex-col gap-3">
-                            <CheckboxWithLabel label="Scan KTM" />
+                            <CheckboxWithLabel label="Scan KTP" />
                             <CheckboxWithLabel label="Scan Ijazah SMA/SMK" />
                             <CheckboxWithLabel label="Pass foto 3x4 (Perhatikan ketentuannya)" />
                         </div>
