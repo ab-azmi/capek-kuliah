@@ -44,7 +44,7 @@ export default function ListDosen() {
                     </div>
                 </TabsContent>
                 <TabsContent value="si">
-                    <div className="flex flex-col lg:grid lg:grid-cols-3 gap-5 mt-10">
+                    <div className="relative grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 lg:mt-10">
                         {dosenSI.map((dosen) => (
                             <DosenCard
                                 key={dosen.email}
