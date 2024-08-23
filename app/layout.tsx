@@ -15,8 +15,11 @@ const fontSans = FontSans({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Skripsian",
-  description: "Panduan Skripsian ILKOM UNNES",
+  title: {
+    default: "Panduan Skripsian ILKOM UNNES",
+    template: "%s | Panduan Skripsian ILKOM UNNES",
+  },
+  description: "Membantu mahasiswa ILKOM UNNES dalam menyelesaikan skripsi",
 };
 
 export default function RootLayout({
