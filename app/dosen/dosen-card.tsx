@@ -109,24 +109,24 @@ const DosenCard = ({
                         className="bg-primary w-10 h-10 rounded-lg absolute -top-6 right-4 text-secondary font-bold text-lg grid place-content-center">
                         {prodi}
                     </div>
-                    <div className="flex flex-col gap-3 text-secondary">
+                    <div className="flex flex-col gap-3 text-slate-200">
 
                         <div className=" font-bold">
                             {name}
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <BriefcaseBusiness className="text-secondary/40 h-5 w-5" />
+                            <BriefcaseBusiness className="text-slate-200/40 h-5 w-5" />
                             {jabatan}
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <Phone className="text-secondary/40 h-5 w-5" />
+                            <Phone className="text-slate-200/40 h-5 w-5" />
                             <p>{phone}</p>
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <Fingerprint className="text-secondary/40 h-5 w-5" />
+                            <Fingerprint className="text-slate-200/40 h-5 w-5" />
                             <p>{nip}</p>
                         </div>
                     </div>
