@@ -99,7 +99,7 @@ const DosenCard = ({
                         transformStyle: "preserve-3d",
                         transform: "translateZ(75px)",
                     }}
-                    className="relative flex flex-col gap-3 rounded-xl bg-black/20 backdrop-blur-lg border border-slate-500 shadow-lg p-4"
+                    className="relative flex flex-col gap-3 rounded-xl bg-black/30 backdrop-blur-lg border border-slate-500 shadow-lg p-4"
                 >
                     <div
                         style={{
