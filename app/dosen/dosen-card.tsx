@@ -8,13 +8,25 @@ import {
 } from "framer-motion";
 import Image, { ImageLoaderProps } from "next/image";
 import unnes from '@/public/images/unnes.png'
+import dosen_ph from '@/public/images/dosen_ph.png'
 import { BriefcaseBusiness, Fingerprint, Phone } from "lucide-react";
 
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
-const Canary = () => {
+const DosenCard = ({
+    alt, name, image, email, prodi, nip, phone, jabatan
+}: {
+    alt: string,
+    name: string,
+    image: string,
+    email: string,
+    prodi: string,
+    nip: string,
+    phone: string,
+    jabatan: string
+}) => {
     const ref = useRef(null);
 
     const x = useMotionValue(0);
@@ -53,7 +65,7 @@ const Canary = () => {
     }
 
     return (
-        <div className="grid w-full place-content-center px-4 py-12 text-slate-900">
+        
             <motion.div
                 ref={ref}
                 onMouseMove={handleMouseMove}
@@ -70,24 +82,24 @@ const Canary = () => {
 
                     <Image src={unnes} width={32} height={32} alt="unnes" className="opacity-70" />
                 </div>
-                <div className="absolute top-40 opacity-30 -left-40 text-white rotate-90 text-[5rem] font-bold">
-                    ALAMSYAH
+                <div className="absolute opacity-30 scale-y-[-1] top-24 -left-20 uppercase text-white rotate-90 text-[5rem] leading-none font-bold">
+                    UNNES
                 </div>
                 <Image
-                    src="https://simpeg2.unnes.ac.id/photo/132320168"
-                    alt="Profile"
+                    src={image === "" ? dosen_ph : image}
+                    alt={alt}
                     width={200}
                     height={200}
                     priority
                     loader={myLoader}
-                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    className="absolute top-0 left-0 w-full h-full object-contain"
                 />
                 <motion.div
                     style={{
                         transformStyle: "preserve-3d",
                         transform: "translateZ(75px)",
                     }}
-                    className="relative flex flex-col gap-3 rounded-xl bg-white shadow-lg p-4"
+                    className="relative flex flex-col gap-3 rounded-xl bg-black/20 backdrop-blur-lg border border-slate-500 shadow-lg p-4"
                 >
                     <div
                         style={{
@@ -95,34 +107,34 @@ const Canary = () => {
                             transformStyle: "preserve-3d",
                         }}
                         className="bg-primary w-10 h-10 rounded-lg absolute -top-6 right-4 text-secondary font-bold text-lg grid place-content-center">
-                        TI
+                        {prodi}
                     </div>
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 text-secondary">
 
                         <div className=" font-bold">
-                            Dr. Alamsyah S.Si., M.Kom.
+                            {name}
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <BriefcaseBusiness className="text-primary/30 h-5 w-5" />
-                            <p>Ketua Jurusan</p>
+                            <BriefcaseBusiness className="text-secondary/40 h-5 w-5" />
+                            {jabatan}
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <Phone className="text-primary/30 h-5 w-5" />
-                            <p>+62 815-6513-617</p>
+                            <Phone className="text-secondary/40 h-5 w-5" />
+                            <p>{phone}</p>
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <Fingerprint className="text-primary/30 h-5 w-5" />
-                            <p>NIP-197405172006041001</p>
+                            <Fingerprint className="text-secondary/40 h-5 w-5" />
+                            <p>{nip}</p>
                         </div>
                     </div>
                 </motion.div>
             </motion.div>
-        </div>
+        
     );
 };
 
 
-export default Canary;
+export default DosenCard;
