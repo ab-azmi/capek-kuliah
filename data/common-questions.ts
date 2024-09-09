@@ -18,7 +18,7 @@ const commonQuestions = [
     {
         id: 2,
         question: 'Proses submit artikel di JAIST gimana?',
-        answer: 'belum tau'
+        answer: 'Jaist tinggal upload, terus konfirmasi isi form, dapet surat keterangan upload!. Selesai. https://bit.ly/SuratJAIST. ~Yogiana'
     },
     {
         id: 7,

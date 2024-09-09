@@ -312,6 +312,23 @@ export default function PreWisuda() {
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
+                            Persiapan sebelum menemui Ketua Jurusan
+                        </h1>
+                        <p className=" text-slate-400">
+                            Saat menemui kajur, anda akan diberi beberapa pertanyaan nyeleneh. Jadi persiapkan beberapa hal berikut.
+                        </p>
+                        <div className="mt-3 flex flex-col gap-3">
+                            <CheckboxWithLabel label="Nama Perusahaan (Jika kerja)" />
+                            <CheckboxWithLabel label="Alamat Perusahaan (Jika kerja)" />
+                            <CheckboxWithLabel label="Nama & Kontak Owner Perusahaan (Jika kerja)" />
+                            <CheckboxWithLabel label="Fokus & Produk Perusahaan (Jika kerja)" />
+                            <CheckboxWithLabel label="Range penghasilan (Jika kerja)" />
+                            <CheckboxWithLabel label="Dapat informasi seputar UNNES dari mana?" />
+                            <CheckboxWithLabel label="Is Coming..." />
+                        </div>
+                    </RevealRightCard>
+                    <RevealRightCard>
+                        <h1 className="text-2xl font-semibold">
                             Temui Ketua Jurusan Untuk Konfirmasi SBVT
                         </h1>
                         <p className=" text-slate-400">
