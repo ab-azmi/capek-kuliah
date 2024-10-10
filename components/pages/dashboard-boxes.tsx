@@ -41,8 +41,8 @@ export default function DashboardBoxes() {
                 </motion.div>
                 {/* Joki */}
                 <motion.div 
-                 initial={{y: 60, x: -60, opacity: 0}}
-                 animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
+                    initial={{y: 60, x: -60, opacity: 0}}
+                    animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
                     className="border-2 rounded-lg p-3 lg:p-5 h-full">
                     <h1 className="font-bold text-xl lg:text-2xl">Jasa Joki</h1>
                     <p className=" text-slate-400 lg:text-base text-sm">
