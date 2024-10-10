@@ -236,10 +236,24 @@ export default function DashboardBoxes() {
                         <Link href={'https://www.mendeley.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/mendeley.png'} alt="Mendeley" width={45} height={45} />
                         </Link>
+                        <Link href={'https://www.zotero.org/'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/zotero.png'} alt="Zotero" width={45} height={45} />
+                        </Link>
                         <Link href={'https://www.figma.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/figma.png'} alt="Figma" width={30} height={30} />
                         </Link>
-
+                        <Link href={'https://harzing.com/resources/publish-or-perish/windows'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/publish_or_perish.png'} alt="Publish or Perish" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.deepl.com/translator'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/deepl.png'} alt="DeepL" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://colab.research.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/google_colab.png'} alt="Google Colab" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://universe.roboflow.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/roboflow.png'} alt="Roboflow" width={45} height={45} />
+                        </Link>
                     </div>
                 </motion.div>
             </div>
