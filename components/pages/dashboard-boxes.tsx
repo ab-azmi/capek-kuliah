@@ -168,6 +168,9 @@ export default function DashboardBoxes() {
                         <Link href="https://scholar.google.com/" target="_blank" className="hover:underline">
                             Google Scholar
                         </Link>
+                        <Link href="https://journals.sagepub.com/" target="_blank" className="hover:underline">
+                            Sage Journals
+                        </Link>
                     </div>
                 </motion.div>
             </div>
