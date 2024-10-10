@@ -68,6 +68,18 @@ export default function DashboardBoxes() {
                                 </Link>
                         </div>
                         <div className="flex justify-between items-center">
+                            Joki LaTeX/Formatting
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/ERCx1tIm2wk?si=oHft2qogkhEDFhV2" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            Joki Turnitin/Anti-Plagiasi
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/qWwb8S02f_c?si=iJKlKRXgfLsxytmB" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
+                        </div>
+                        <div className="flex justify-between items-center">
                             Joki Full Set
                                 <Link className={buttonVariants({size: 'sm'})} href="https://cornhub.website" target="_blank">
                                     <Link2 size={16} />
