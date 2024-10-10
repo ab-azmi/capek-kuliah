@@ -80,6 +80,12 @@ export default function DashboardBoxes() {
                                 </Link>
                         </div>
                         <div className="flex justify-between items-center">
+                            Joki Translate B. Inggris
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/mtd92pfy0YY?si=riWFX_9BBCjnNGXw&t=54" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
+                        </div>
+                        <div className="flex justify-between items-center">
                             Joki Full Set
                                 <Link className={buttonVariants({size: 'sm'})} href="https://cornhub.website" target="_blank">
                                     <Link2 size={16} />
