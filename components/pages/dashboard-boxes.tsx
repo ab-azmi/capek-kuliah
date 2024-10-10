@@ -156,6 +156,12 @@ export default function DashboardBoxes() {
                         <Link href="https://arxiv.org/archive/cs" target="_blank" className="hover:underline">
                             Arxiv
                         </Link>
+                        <Link href="https://link.springer.com/" target="_blank" className="hover:underline">
+                            Springer
+                        </Link>
+                        <Link href="https://scholar.google.com/" target="_blank" className="hover:underline">
+                            Google Scholar
+                        </Link>
                     </div>
                 </motion.div>
             </div>
