@@ -188,11 +188,11 @@ export default function DashboardBoxes() {
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    PD
+                                    AU
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">ProDebugger</h1>
+                                <h1 className="font-bold text-sm">Auni S.Kom</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                 aramadhan395@gmail.com
                                 </p>
@@ -201,11 +201,11 @@ export default function DashboardBoxes() {
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    PB
+                                    AZ
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Pelerbabi884</h1>
+                                <h1 className="font-bold text-sm">Azmi</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                     azmi.kiva@gmail.com
                                 </p>
@@ -214,13 +214,13 @@ export default function DashboardBoxes() {
                         <div className="flex gap-3 items-center">
                             <Avatar>
                                 <AvatarFallback>
-                                    KT
+                                    FF
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">KatingUIUX</h1>
+                                <h1 className="font-bold text-sm">Faris Faikar</h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
-                                    kating.uiux@gmail.com
+                                    farisfaikar.r@gmail.com
                                 </p>
                             </div>
                         </div>
