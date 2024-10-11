@@ -41,8 +41,8 @@ export default function DashboardBoxes() {
                 </motion.div>
                 {/* Joki */}
                 <motion.div 
-                 initial={{y: 60, x: -60, opacity: 0}}
-                 animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
+                    initial={{y: 60, x: -60, opacity: 0}}
+                    animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
                     className="border-2 rounded-lg p-3 lg:p-5 h-full">
                     <h1 className="font-bold text-xl lg:text-2xl">Jasa Joki</h1>
                     <p className=" text-slate-400 lg:text-base text-sm">
@@ -64,6 +64,24 @@ export default function DashboardBoxes() {
                         <div className="flex justify-between items-center">
                             Joki ML & AI
                                 <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/uVYjZKWEWmk?t=368" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            Joki LaTeX/Formatting
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/ERCx1tIm2wk?si=oHft2qogkhEDFhV2" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            Joki Turnitin/Anti-Plagiasi
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/qWwb8S02f_c?si=iJKlKRXgfLsxytmB" target="_blank">
+                                    <Link2 size={16} />
+                                </Link>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            Joki Translate B. Inggris
+                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/mtd92pfy0YY?si=riWFX_9BBCjnNGXw&t=54" target="_blank">
                                     <Link2 size={16} />
                                 </Link>
                         </div>
@@ -144,6 +162,15 @@ export default function DashboardBoxes() {
                         <Link href="https://arxiv.org/archive/cs" target="_blank" className="hover:underline">
                             Arxiv
                         </Link>
+                        <Link href="https://link.springer.com/" target="_blank" className="hover:underline">
+                            Springer
+                        </Link>
+                        <Link href="https://scholar.google.com/" target="_blank" className="hover:underline">
+                            Google Scholar
+                        </Link>
+                        <Link href="https://journals.sagepub.com/" target="_blank" className="hover:underline">
+                            Sage Journals
+                        </Link>
                     </div>
                 </motion.div>
             </div>
@@ -209,19 +236,33 @@ export default function DashboardBoxes() {
                         Beberapa Tool yang bisa bantu kamu skripsian
                     </p>
                     <div className="flex gap-4 flex-wrap mt-5">
-                        <Link href={'https://openai.com/chatgpt/'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://openai.com/chatgpt/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/cgpt.png'} alt="Chatgpt" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.kaggle.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://www.kaggle.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/kaggle.webp'} alt="Kaggle" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.mendeley.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://www.mendeley.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/mendeley.png'} alt="Mendeley" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.figma.com'} target="_blank" className="border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://www.zotero.org/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/zotero.png'} alt="Zotero" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.figma.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
                             <Image src={'/images/figma.png'} alt="Figma" width={30} height={30} />
                         </Link>
-
+                        <Link href={'https://harzing.com/resources/publish-or-perish/windows'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/publish_or_perish.png'} alt="Publish or Perish" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.deepl.com/translator'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/deepl.png'} alt="DeepL" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://colab.research.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/google_colab.png'} alt="Google Colab" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://universe.roboflow.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                            <Image src={'/images/roboflow.png'} alt="Roboflow" width={45} height={45} />
+                        </Link>
                     </div>
                 </motion.div>
             </div>
