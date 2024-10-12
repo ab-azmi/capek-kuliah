@@ -105,6 +105,7 @@ export default function DashboardBoxes() {
                     className="border-2 rounded-lg p-3 lg:p-5">
                     <div className="flex gap-3 items-center">
                         <Avatar>
+                            <AvatarImage alt="Informan" src="/images/info.png" />
                             <AvatarFallback>
                                 IM
                             </AvatarFallback>
@@ -187,6 +188,7 @@ export default function DashboardBoxes() {
                     <div className="mt-5 flex flex-col gap-3 lg:gap-5">
                         <div className="flex gap-3 items-center">
                             <Avatar>
+                                <AvatarImage alt="Auni S.Kom" src="https://github.com/auni-st.png" />
                                 <AvatarFallback>
                                     AU
                                 </AvatarFallback>
@@ -200,6 +202,7 @@ export default function DashboardBoxes() {
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
+                                <AvatarImage alt="Azmi" src="https://github.com/ab-azmi.png" />
                                 <AvatarFallback>
                                     AZ
                                 </AvatarFallback>
@@ -213,6 +216,7 @@ export default function DashboardBoxes() {
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
+                                <AvatarImage alt="Faris Faikar" src="https://github.com/farisfaikar.png" />
                                 <AvatarFallback>
                                     FF
                                 </AvatarFallback>
