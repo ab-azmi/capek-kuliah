@@ -172,6 +172,9 @@ export default function DashboardBoxes() {
                         <Link href="https://journals.sagepub.com/" target="_blank" className="hover:underline">
                             Sage Journals
                         </Link>
+                        <Link href="https://doaj.org/" target="_blank" className="hover:underline">
+                            Director of Open Access Journals
+                        </Link>
                     </div>
                 </motion.div>
             </div>
