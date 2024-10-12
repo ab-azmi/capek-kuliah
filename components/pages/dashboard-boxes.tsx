@@ -3,7 +3,7 @@
 import { Link2, MessageCircle, SendHorizonal } from "lucide-react"
 import { Button } from "../ui/button"
 import Link from "next/link"
-import { Avatar, AvatarFallback } from "../ui/avatar"
+import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
 import Image from "next/image"
 import { berkasWajib } from "@/data/berkas-wajib"
 import { useState } from "react"
@@ -230,7 +230,7 @@ export default function DashboardBoxes() {
                         </div>
                     </div>
                 </motion.div>
-                {/* TOol Helper */}
+                {/* Tool Helper */}
                 <motion.div 
                     initial={{y: 60, x: 60, opacity: 0}}
                     animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.2}}}
