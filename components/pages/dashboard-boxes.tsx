@@ -9,6 +9,8 @@ import { berkasWajib } from "@/data/berkas-wajib"
 import { useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from 'framer-motion'
+import { SiGithub, SiLinkedin } from "@icons-pack/react-simple-icons"
+import { Badge } from "@/components/ui/badge"
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -197,7 +199,21 @@ export default function DashboardBoxes() {
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Auni S.Kom</h1>
+                                <h1 className="font-bold text-sm flex items-center gap-2">
+                                    Auni S.Kom
+                                    <div className="flex items-center gap-1">
+                                        <Link href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank">
+                                            <Badge variant="outline" className="p-0">
+                                                <SiLinkedin size={16}/>
+                                            </Badge>
+                                        </Link>
+                                        <Link href="https://github.com/auni-st" target="_blank">
+                                            <Badge variant="outline" className="p-0">
+                                                <SiGithub size={16}/>
+                                            </Badge>
+                                        </Link>
+                                    </div>
+                                </h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                 aramadhan395@gmail.com
                                 </p>
@@ -211,7 +227,21 @@ export default function DashboardBoxes() {
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Azmi</h1>
+                                <h1 className="font-bold text-sm flex items-center gap-2">
+                                    Azmi
+                                    <div className="flex items-center gap-1">
+                                        <Link href="https://www.linkedin.com/in/abdillah-azmi-4a2111232" target="_blank">
+                                            <Badge variant="outline" className="p-0">
+                                                <SiLinkedin size={16}/>
+                                            </Badge>
+                                        </Link>
+                                        <Link href="https://github.com/ab-azmi" target="_blank">
+                                            <Badge variant="outline" className="p-0">
+                                                <SiGithub size={16}/>
+                                            </Badge>
+                                        </Link>
+                                    </div>
+                                </h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                     azmi.kiva@gmail.com
                                 </p>
@@ -225,7 +255,21 @@ export default function DashboardBoxes() {
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Faris Faikar</h1>
+                                <h1 className="font-bold text-sm flex items-center gap-2">
+                                    Faris Faikar
+                                    <div className="flex items-center gap-1">
+                                        <Link href="https://linkedin.com/in/farisfaikar" target="_blank">
+                                            <Badge variant="outline" className="p-0">
+                                                <SiLinkedin size={16}/>
+                                            </Badge>
+                                        </Link>
+                                        <Link href="https://github.com/farisfaikar" target="_blank">
+                                            <Badge variant="outline" className="p-0">
+                                                <SiGithub size={16}/>
+                                            </Badge>
+                                        </Link>
+                                    </div>
+                                </h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                     farisfaikar.r@gmail.com
                                 </p>
