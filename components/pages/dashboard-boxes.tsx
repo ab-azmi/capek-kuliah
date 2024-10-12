@@ -242,8 +242,8 @@ export default function DashboardBoxes() {
                     <p className=" text-slate-400 text-sm lg:text-sm">
                         Beberapa Tool yang bisa bantu kamu skripsian
                     </p>
-                    <div className="flex gap-4 flex-wrap mt-5">
-                        <Link href={'https://openai.com/chatgpt/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                    <div className="grid grid-cols-3 gap-4 mt-5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4">
+                        <Link href={'https://openai.com/chatgpt/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/cgpt.png'} alt="Chatgpt" width={45} height={45} />
                         </Link>
                         <Link href={'https://gemini.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
