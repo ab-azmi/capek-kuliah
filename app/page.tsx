@@ -4,7 +4,7 @@ import HomeTitle from "@/components/home-title";
 import ScrollProgress from "@/components/scroll-progress";
 import ColyAqu from "@/components/coly-aqu";
 import HelpDesk from "@/components/help-desk";
-
+import TemplateDownload from "@/components/pages/template-download";
 
 export default function Home() {
   return (
@@ -17,6 +17,9 @@ export default function Home() {
 
       {/* Boxes */}
       <DashboardBoxes />
+
+      {/* Template Download */}
+      <TemplateDownload />
 
       {/* Main Content */}
       <TabContent />
