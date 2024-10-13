@@ -10,7 +10,6 @@ import { useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Badge } from "@/components/ui/badge"
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -203,14 +202,10 @@ export default function DashboardBoxes() {
                                     Auni S.Kom
                                     <div className="flex items-center gap-1">
                                         <Link href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank">
-                                            <Badge variant="outline" className="p-0">
-                                                <FaLinkedin size={16}/>
-                                            </Badge>
+                                            <FaLinkedin size={16}/>
                                         </Link>
                                         <Link href="https://github.com/auni-st" target="_blank">
-                                            <Badge variant="outline" className="p-0">
-                                                <FaGithub size={16}/>
-                                            </Badge>
+                                            <FaGithub size={16}/>
                                         </Link>
                                     </div>
                                 </h1>
@@ -231,14 +226,10 @@ export default function DashboardBoxes() {
                                     Azmi
                                     <div className="flex items-center gap-1">
                                         <Link href="https://www.linkedin.com/in/abdillah-azmi-4a2111232" target="_blank">
-                                            <Badge variant="outline" className="p-0">
-                                                <FaLinkedin size={16}/>
-                                            </Badge>
+                                            <FaLinkedin size={16}/>
                                         </Link>
                                         <Link href="https://github.com/ab-azmi" target="_blank">
-                                            <Badge variant="outline" className="p-0">
-                                                <FaGithub size={16}/>
-                                            </Badge>
+                                            <FaGithub size={16}/>
                                         </Link>
                                     </div>
                                 </h1>
@@ -259,14 +250,10 @@ export default function DashboardBoxes() {
                                     Faris Faikar
                                     <div className="flex items-center gap-1">
                                         <Link href="https://linkedin.com/in/farisfaikar" target="_blank">
-                                            <Badge variant="outline" className="p-0">
-                                                <FaLinkedin size={16}/>
-                                            </Badge>
+                                            <FaLinkedin size={16}/>
                                         </Link>
                                         <Link href="https://github.com/farisfaikar" target="_blank">
-                                            <Badge variant="outline" className="p-0">
-                                                <FaGithub size={16}/>
-                                            </Badge>
+                                            <FaGithub size={16}/>
                                         </Link>
                                     </div>
                                 </h1>
