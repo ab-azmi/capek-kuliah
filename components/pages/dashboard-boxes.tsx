@@ -9,7 +9,7 @@ import { berkasWajib } from "@/data/berkas-wajib"
 import { useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from 'framer-motion'
-import { SiGithub, SiLinkedin } from "@icons-pack/react-simple-icons"
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Badge } from "@/components/ui/badge"
 
 export default function DashboardBoxes() {
@@ -204,12 +204,12 @@ export default function DashboardBoxes() {
                                     <div className="flex items-center gap-1">
                                         <Link href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank">
                                             <Badge variant="outline" className="p-0">
-                                                <SiLinkedin size={16}/>
+                                                <FaLinkedin size={16}/>
                                             </Badge>
                                         </Link>
                                         <Link href="https://github.com/auni-st" target="_blank">
                                             <Badge variant="outline" className="p-0">
-                                                <SiGithub size={16}/>
+                                                <FaGithub size={16}/>
                                             </Badge>
                                         </Link>
                                     </div>
@@ -232,12 +232,12 @@ export default function DashboardBoxes() {
                                     <div className="flex items-center gap-1">
                                         <Link href="https://www.linkedin.com/in/abdillah-azmi-4a2111232" target="_blank">
                                             <Badge variant="outline" className="p-0">
-                                                <SiLinkedin size={16}/>
+                                                <FaLinkedin size={16}/>
                                             </Badge>
                                         </Link>
                                         <Link href="https://github.com/ab-azmi" target="_blank">
                                             <Badge variant="outline" className="p-0">
-                                                <SiGithub size={16}/>
+                                                <FaGithub size={16}/>
                                             </Badge>
                                         </Link>
                                     </div>
@@ -260,12 +260,12 @@ export default function DashboardBoxes() {
                                     <div className="flex items-center gap-1">
                                         <Link href="https://linkedin.com/in/farisfaikar" target="_blank">
                                             <Badge variant="outline" className="p-0">
-                                                <SiLinkedin size={16}/>
+                                                <FaLinkedin size={16}/>
                                             </Badge>
                                         </Link>
                                         <Link href="https://github.com/farisfaikar" target="_blank">
                                             <Badge variant="outline" className="p-0">
-                                                <SiGithub size={16}/>
+                                                <FaGithub size={16}/>
                                             </Badge>
                                         </Link>
                                     </div>
