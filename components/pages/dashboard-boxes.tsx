@@ -3,12 +3,13 @@
 import { Link2, MessageCircle, SendHorizonal } from "lucide-react"
 import { Button } from "../ui/button"
 import Link from "next/link"
-import { Avatar, AvatarFallback } from "../ui/avatar"
+import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
 import Image from "next/image"
 import { berkasWajib } from "@/data/berkas-wajib"
 import { useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from 'framer-motion'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -105,6 +106,7 @@ export default function DashboardBoxes() {
                     className="border-2 rounded-lg p-3 lg:p-5">
                     <div className="flex gap-3 items-center">
                         <Avatar>
+                            <AvatarImage alt="Informan" src="/images/info.png" />
                             <AvatarFallback>
                                 IM
                             </AvatarFallback>
@@ -171,6 +173,9 @@ export default function DashboardBoxes() {
                         <Link href="https://journals.sagepub.com/" target="_blank" className="hover:underline">
                             Sage Journals
                         </Link>
+                        <Link href="https://doaj.org/" target="_blank" className="hover:underline">
+                            Director of Open Access Journals
+                        </Link>
                     </div>
                 </motion.div>
             </div>
@@ -187,12 +192,23 @@ export default function DashboardBoxes() {
                     <div className="mt-5 flex flex-col gap-3 lg:gap-5">
                         <div className="flex gap-3 items-center">
                             <Avatar>
+                                <AvatarImage alt="Auni S.Kom" src="https://github.com/auni-st.png" />
                                 <AvatarFallback>
                                     AU
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Auni S.Kom</h1>
+                                <h1 className="font-bold text-sm flex items-center gap-2">
+                                    Auni S.Kom
+                                    <div className="flex items-center gap-1">
+                                        <Link href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank">
+                                            <FaLinkedin size={16}/>
+                                        </Link>
+                                        <Link href="https://github.com/auni-st" target="_blank">
+                                            <FaGithub size={16}/>
+                                        </Link>
+                                    </div>
+                                </h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                 aramadhan395@gmail.com
                                 </p>
@@ -200,12 +216,23 @@ export default function DashboardBoxes() {
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
+                                <AvatarImage alt="Azmi" src="https://github.com/ab-azmi.png" />
                                 <AvatarFallback>
                                     AZ
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Azmi</h1>
+                                <h1 className="font-bold text-sm flex items-center gap-2">
+                                    Azmi
+                                    <div className="flex items-center gap-1">
+                                        <Link href="https://www.linkedin.com/in/abdillah-azmi-4a2111232" target="_blank">
+                                            <FaLinkedin size={16}/>
+                                        </Link>
+                                        <Link href="https://github.com/ab-azmi" target="_blank">
+                                            <FaGithub size={16}/>
+                                        </Link>
+                                    </div>
+                                </h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                     azmi.kiva@gmail.com
                                 </p>
@@ -213,12 +240,23 @@ export default function DashboardBoxes() {
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
+                                <AvatarImage alt="Faris Faikar" src="https://github.com/farisfaikar.png" />
                                 <AvatarFallback>
                                     FF
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <h1 className="font-bold text-sm">Faris Faikar</h1>
+                                <h1 className="font-bold text-sm flex items-center gap-2">
+                                    Faris Faikar
+                                    <div className="flex items-center gap-1">
+                                        <Link href="https://linkedin.com/in/farisfaikar" target="_blank">
+                                            <FaLinkedin size={16}/>
+                                        </Link>
+                                        <Link href="https://github.com/farisfaikar" target="_blank">
+                                            <FaGithub size={16}/>
+                                        </Link>
+                                    </div>
+                                </h1>
                                 <p className=" text-slate-400 text-xs lg:text-sm">
                                     farisfaikar.r@gmail.com
                                 </p>
@@ -226,7 +264,7 @@ export default function DashboardBoxes() {
                         </div>
                     </div>
                 </motion.div>
-                {/* TOol Helper */}
+                {/* Tool Helper */}
                 <motion.div 
                     initial={{y: 60, x: 60, opacity: 0}}
                     animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.2}}}
@@ -235,32 +273,50 @@ export default function DashboardBoxes() {
                     <p className=" text-slate-400 text-sm lg:text-sm">
                         Beberapa Tool yang bisa bantu kamu skripsian
                     </p>
-                    <div className="flex gap-4 flex-wrap mt-5">
-                        <Link href={'https://openai.com/chatgpt/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                    <div className="grid grid-cols-3 gap-4 mt-5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4">
+                        <Link href={'https://openai.com/chatgpt/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/cgpt.png'} alt="Chatgpt" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.kaggle.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://gemini.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/gemini.png'} alt="Gemini" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://aistudio.google.com/app/prompts/new_chat'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/ai_studio.png'} alt="AI Studio" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://copilot.microsoft.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/github_copilot.png'} alt="GitHub Copilot" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://aws.amazon.com/q/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/amazon_q.png'} alt="Amazon Q" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.kaggle.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/kaggle.webp'} alt="Kaggle" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.mendeley.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://www.mendeley.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/mendeley.png'} alt="Mendeley" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.zotero.org/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://www.zotero.org/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/zotero.png'} alt="Zotero" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.figma.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
-                            <Image src={'/images/figma.png'} alt="Figma" width={30} height={30} />
+                        <Link href={'https://www.figma.com'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/figma.webp'} alt="Figma" width={30} height={30} />
                         </Link>
-                        <Link href={'https://harzing.com/resources/publish-or-perish/windows'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://www.eraser.io/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/eraser.png'} alt="Eraser.io" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://harzing.com/resources/publish-or-perish/windows'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/publish_or_perish.png'} alt="Publish or Perish" width={45} height={45} />
                         </Link>
-                        <Link href={'https://www.deepl.com/translator'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
-                            <Image src={'/images/deepl.png'} alt="DeepL" width={45} height={45} />
+                        <Link href={'https://www.deepl.com/translator'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/deepl.png'} alt="DeepL" width={25} height={25} />
                         </Link>
-                        <Link href={'https://colab.research.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://quillbot.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/quillbot.png'} alt="Quillbot" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://colab.research.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/google_colab.png'} alt="Google Colab" width={45} height={45} />
                         </Link>
-                        <Link href={'https://universe.roboflow.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors">
+                        <Link href={'https://universe.roboflow.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/roboflow.png'} alt="Roboflow" width={45} height={45} />
                         </Link>
                     </div>

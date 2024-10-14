@@ -1,9 +1,12 @@
 "use client"
+
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/dark-mode-toggle";
+import UpdatedDate from "@/components/updated-date";
+import { SiGithub } from "@icons-pack/react-simple-icons"
 
 export default function HomeTitle() {
     return (
@@ -28,7 +31,15 @@ export default function HomeTitle() {
                         Dibuat berdasarkan pengalaman para sepuh yang lulus 14 smester
                     </p>
                 </div>
-                <Link href="/update-form" className={cn(buttonVariants(), 'text-xs lg:text-base w-full lg:w-fit')}>Request Update</Link>
+                <div className="flex w-full flex-col items-center justify-between gap-2 mt-2 sm:mt-0 sm:flex-row sm:w-auto">
+                    <Link href="/update-form" className={cn(buttonVariants(), 'text-xs lg:text-base w-full lg:w-fit')}>
+                        Request Update
+                    </Link>
+                    <Link href="https://github.com/ab-azmi/capek-kuliah" target="_blank" className={cn(buttonVariants({ variant: 'outline' }), 'flex items-center justify-center gap-2 text-xs lg:text-base w-full lg:w-fit')}>
+                        <SiGithub />
+                        Star and Contribute!
+                    </Link>
+                </div>
             </motion.div>
 
             <motion.div 
@@ -48,7 +59,7 @@ export default function HomeTitle() {
 
                 <ModeToggle />
 
-                <p className="text-slate-400 italic lg:text-base text-xs">Updated 23 Agustus 2024</p>
+                <UpdatedDate />
             </motion.div>
         </>
     )
