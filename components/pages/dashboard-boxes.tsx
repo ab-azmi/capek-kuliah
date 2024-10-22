@@ -275,13 +275,16 @@ export default function DashboardBoxes() {
                     </p>
                     <div className="grid grid-cols-3 gap-4 mt-5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4">
                         <Link href={'https://openai.com/chatgpt/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
-                            <Image src={'/images/cgpt.png'} alt="Chatgpt" width={45} height={45} />
+                            <Image src={'/images/chatgpt.png'} alt="ChatGPT" width={45} height={45} />
                         </Link>
                         <Link href={'https://gemini.google.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/gemini.png'} alt="Gemini" width={45} height={45} />
                         </Link>
                         <Link href={'https://aistudio.google.com/app/prompts/new_chat'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/ai_studio.png'} alt="AI Studio" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://claude.ai/new'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/claude.png'} alt="Claude AI" width={45} height={45} />
                         </Link>
                         <Link href={'https://copilot.microsoft.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/github_copilot.png'} alt="GitHub Copilot" width={45} height={45} />
@@ -318,6 +321,9 @@ export default function DashboardBoxes() {
                         </Link>
                         <Link href={'https://universe.roboflow.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/roboflow.png'} alt="Roboflow" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://typeset.io/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/scispace.png'} alt="Scispace" width={45} height={45} />
                         </Link>
                     </div>
                 </motion.div>
