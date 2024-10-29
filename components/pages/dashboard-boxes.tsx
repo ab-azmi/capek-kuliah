@@ -325,6 +325,15 @@ export default function DashboardBoxes() {
                         <Link href={'https://typeset.io/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/scispace.png'} alt="Scispace" width={45} height={45} />
                         </Link>
+                        <Link href={'https://www.connectedpapers.com/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/connected_papers.png'} alt="Connected Papers" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.researchrabbit.ai/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/research_rabbit.webp'} alt="Research Rabbit" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.semanticscholar.org/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/semantic_scholar.png'} alt="Semantic Scholar" width={45} height={45} />
+                        </Link>
                     </div>
                 </motion.div>
             </div>
