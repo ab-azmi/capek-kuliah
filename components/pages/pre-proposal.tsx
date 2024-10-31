@@ -116,10 +116,10 @@ export default function PreProposal() {
                             Menulis Bab 1 sampai 3 Proposal
                         </h1>
                         <p className=" text-slate-400">
-                            Ikuti format penulisan yang ada pada guide book. Kalau masih bingung, lihat skripsi kating.
+                            Ikuti format penulisan yang ada pada buku panduan. Kalau masih bingung, lihat skripsi kating.
                         </p>
-                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/file/d/16ZMuiPEHbvzfiw7clkk-X07GEoP_WASP/view?usp=sharing"} target="_blank">
-                            Guide Book
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/file/d/1_xRw7AxbWcHzJ2ha9fKqERqiKS1W03qn/view"} target="_blank">
+                            Buku Panduan 2024
                         </Link>
                     </RevealRightCard>
                 </div>
