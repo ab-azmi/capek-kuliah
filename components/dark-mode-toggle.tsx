@@ -16,7 +16,7 @@ export function ModeToggle() {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-     
+      
     } else if (theme === "dark") {
       setTheme("system");
       
@@ -44,7 +44,7 @@ export function ModeToggle() {
           }`}
         />
         <Sun
-          className={`h-[1.2rem] text-orange-500 absolute inset-0 m-auto ${
+          className={`h-[1.2rem] text-primary absolute inset-0 m-auto ${
             theme === "light" ? "" : "hidden"
           }`}
         />
