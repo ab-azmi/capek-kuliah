@@ -20,6 +20,26 @@ export const metadata: Metadata = {
     template: "%s | Panduan Skripsian ILKOM UNNES",
   },
   description: "Membantu mahasiswa ILKOM UNNES dalam menyelesaikan skripsi",
+  openGraph: {
+    title: "Panduan Skripsian ILKOM UNNES",
+    type: "website",
+    images: [{
+      url: "/capek_kuliah.png",
+      width: 1200,
+      height: 630,
+      alt: "Logo Capek Kuliah"
+    }],
+  },
+  twitter: {
+    title: "Panduan Skripsian ILKOM UNNES",
+    card: "summary_large_image",
+    images: [{
+      url: "/capek_kuliah.png",
+      width: 1200,
+      height: 630,
+      alt: "Logo Capek Kuliah"
+    }],
+  },
 };
 
 export default function RootLayout({
