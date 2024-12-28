@@ -337,6 +337,15 @@ export default function DashboardBoxes() {
                         <Link href={'https://www.sci-hub.se/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
                             <Image src={'/images/sci_hub.webp'} alt="Sci-Hub" width={45} height={45} />
                         </Link>
+                        <Link href={'https://www.perplexity.ai/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/perplexity.webp'} alt="Perplexity" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://jenni.ai/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/jenni.webp'} alt="Jenni" width={45} height={45} />
+                        </Link>
+                        <Link href={'https://www.blackbox.ai/'} target="_blank" className="flex items-center justify-center border-2 rounded-lg p-3 hover:border-slate-600 transition-colors aspect-square">
+                            <Image src={'/images/blackbox.png'} alt="Blackbox" width={45} height={45} />
+                        </Link>
                     </div>
                 </motion.div>
             </div>
