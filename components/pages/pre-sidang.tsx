@@ -159,7 +159,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Surat ini berfungsi untuk merekap aktivitas bimbingan kamu. Akan ditandatangani oleh Ketua Jurusan
                         </p>
-                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/1mqtPC7_-ZKVEQl1UIwa2PYCFxPHPtQJQl5Q-lnn4_bw/edit?usp=sharing" target="_blank">
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/1G6reT_DMeVBx6b3pYn7uIdgzakohnzVH/edit?usp=sharing&ouid=107038162003292757754&rtpof=true&sd=true" target="_blank">
                             Template Surat
                         </Link>
                     </RevealRightCard>
