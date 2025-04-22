@@ -157,9 +157,9 @@ export default function PreSidang() {
                             Surat Rekap Bimbingan
                         </h1>
                         <p className=" text-slate-400">
-                            Surat ini berfungsi untuk merekap aktivitas bimbingan kamu. Akan ditandatangani oleh Ketua Jurusan
+                            Surat ini berfungsi untuk merekap aktivitas bimbingan kamu. Akan ditandatangani oleh Ketua Jurusan. <span className="text-pink-500 dark:text-pink-300">(Jangan edit di Gdocs, templatenya bisa rusak)</span>
                         </p>
-                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://docs.google.com/document/d/1mqtPC7_-ZKVEQl1UIwa2PYCFxPHPtQJQl5Q-lnn4_bw/edit?usp=sharing" target="_blank">
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="https://drive.google.com/file/d/1yXvy06EWOs35j5x3ZTVNBagrRfdJYc-6/view?usp=sharing" target="_blank">
                             Template Surat
                         </Link>
                     </RevealRightCard>
