@@ -10,6 +10,8 @@ import { useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import updateHistoryData from "@/data/update-history"
+import UpdateHistory from "../update-history"
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -40,62 +42,27 @@ export default function DashboardBoxes() {
                         ))}
                     </div>
                 </motion.div>
-                {/* Joki */}
+                {/* Update Notice */}
                 <motion.div 
                     initial={{y: 60, x: -60, opacity: 0}}
                     animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
-                    className="border-2 rounded-lg p-3 lg:p-5 h-full">
-                    <h1 className="font-bold text-xl lg:text-2xl">Jasa Joki</h1>
-                    <p className=" text-slate-400 lg:text-base text-sm">
-                        Kalau mau instan, bisa cek di bawah ini
-                    </p>
-                    <div className="mt-5 flex flex-col gap-3">
-                        <div className="flex justify-between items-center">
-                            Joki Penulisan
-                            <Link className={buttonVariants({size: 'sm'})} href={'https://www.youtube.com/watch?v=hZORcRzy-lY'} target="_blank">
-                                <Link2 size={16} />
-                            </Link>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Joki Web & UI/UX
-                                <Link className={buttonVariants({size: 'sm'})} href="https://www.youtube.com/watch?v=BJrAbX6ps2s" target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Joki ML & AI
-                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/uVYjZKWEWmk?t=368" target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Joki LaTeX/Formatting
-                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/ERCx1tIm2wk?si=oHft2qogkhEDFhV2" target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Joki Turnitin/Anti-Plagiasi
-                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/qWwb8S02f_c?si=iJKlKRXgfLsxytmB" target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Joki Translate B. Inggris
-                                <Link className={buttonVariants({size: 'sm'})} href="https://youtu.be/mtd92pfy0YY?si=riWFX_9BBCjnNGXw&t=54" target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            Joki Full Set
-                                <Link className={buttonVariants({size: 'sm'})} href="https://cornhub.website" target="_blank">
-                                    <Link2 size={16} />
-                                </Link>
+                    className="h-full border-2 rounded-lg p-3 lg:p-5">
+                    <div className="h-full flex flex-col">
+                        <h1 className="font-bold text-xl lg:text-2xl">Update Notice</h1>
+                        <p className=" text-slate-400 lg:text-base text-sm">
+                            Perubahan terbaru berdasarkan request kalian
+                        </p>
+                        <div className="mt-5 h-full flex flex-col">
+                            <div className="relative max-h-80 overflow-y-auto flex gap-5 flex-col mb-3">
+                                {updateHistoryData.map((history, index) => (
+                                    <UpdateHistory key={index} history={history}/>
+                                ))}
+                            </div>
+                            <div className="bg-secondary-foreground rounded-l-lg rounded-tr-lg text-secondary ml-auto p-3 w-fit text-sm max-w-[90%] lg:max-w-[80%]">
+                                Thx 👍
+                            </div>
                         </div>
                     </div>
-                    <p className="text-slate-400 mt-2 text-xs lg:text-sm italic">
-                        *beda tipe beda harga ya
-                    </p>
                 </motion.div>
             </div>
             <div className="w-full lg:w-1/3 flex flex-col gap-5">
@@ -146,7 +113,7 @@ export default function DashboardBoxes() {
                 <motion.div 
                     initial={{y: 60, opacity: 0}}
                     animate={{y: 0, opacity: 1, transition: {duration: 0.5, delay: 0.3}}}
-                    className="border-2 rounded-lg p-3 lg:p-5">
+                    className="border-2 rounded-lg p-3 lg:p-5 h-full">
                     <h1 className="font-bold text-xl lg:text-2xl">Referensi Artikel</h1>
                     <p className=" text-slate-400 text-sm lg:text-base">
                         Beberapa referensi untuk mencari artikel
