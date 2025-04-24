@@ -181,7 +181,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Ini hal penting. Wajib kalian isi. Jadi syarat wajib dalam SBVT nanti
                         </p>
-                        <Link className={cn(buttonVariants(), 'mt-3')} href={'https://docs.google.com/forms/d/e/1FAIpQLScSTUmBRdza0zl2Nu-O8Botlg9-zQp83FkP_i9RP_-jdKOZ1A/viewform'} target="_blank">
+                        <Link className={cn(buttonVariants(), 'mt-3')} href={'https://docs.google.com/forms/d/e/1FAIpQLSfTC_U35YRgZ2zBQQKE-c8B1bypPQb_yBly7y77ruNfkEkmmQ/viewform'} target="_blank">
                             Google Form
                         </Link>
                     </RevealRightCard>
