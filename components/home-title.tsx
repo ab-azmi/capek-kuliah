@@ -4,9 +4,9 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ModeToggle } from "@/components/dark-mode-toggle";
 import UpdatedDate from "@/components/updated-date";
 import { SiGithub } from "@icons-pack/react-simple-icons"
+import Image from "next/image"
 
 export default function HomeTitle() {
     return (
@@ -40,6 +40,7 @@ export default function HomeTitle() {
                         Star and Contribute!
                     </Link>
                 </div>
+                <UpdatedDate />
             </motion.div>
 
             <motion.div 
@@ -55,11 +56,8 @@ export default function HomeTitle() {
                         restDelta: 0.001
                     }
                 }}
-                className="w-full flex flex-row-reverse md:flex-col justify-between lg:gap-10 items-end">
-
-                <ModeToggle />
-
-                <UpdatedDate />
+                className="hidden w-full lg:flex flex-row-reverse md:flex-col justify-between lg:gap-10 items-end">
+                <Image src="/capek_kuliah_hero.png" alt="Capek Kuliah Logo" className="h-56 w-56 inline-block mr-2" width={512} height={512} />
             </motion.div>
         </>
     )
