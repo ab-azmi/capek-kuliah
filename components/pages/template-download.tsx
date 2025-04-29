@@ -18,14 +18,14 @@ export default function TemplateDownload() {
           <DownloadButton 
             icon={<TbFileTypeDocx size={24} />}
             targetText="Download DOCX"
-            filePath="/files/[v1.5] Template Proposal Skripsi_Ilmu Komputer_UNNES.docx"
-            fileName="[v1.5] Template Proposal Skripsi_Ilmu Komputer_UNNES.docx"
+            filePath="/files/[v1.6] Template Proposal Skripsi_Ilmu Komputer_UNNES.docx"
+            fileName="[v1.6] Template Proposal Skripsi_Ilmu Komputer_UNNES.docx"
           />
           <DownloadButton 
             icon={<TbFileTypePdf size={24} />}
             targetText="Download PDF"
-            filePath="/files/[v1.5] Template Proposal Skripsi_Ilmu Komputer_UNNES.pdf"
-            fileName="[v1.5] Template Proposal Skripsi_Ilmu Komputer_UNNES.pdf"
+            filePath="/files/[v1.6] Template Proposal Skripsi_Ilmu Komputer_UNNES.pdf"
+            fileName="[v1.6] Template Proposal Skripsi_Ilmu Komputer_UNNES.pdf"
           />
           <DownloadButton 
             icon={<FaGithub size={24} />}
