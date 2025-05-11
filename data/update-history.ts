@@ -5,6 +5,12 @@ const updateHistoryData: {
     thanksToEmail: string,
 }[] = [
     {
+        date: '11 Mei 2025',
+        description: 'Update Link form keterangan RJI',
+        thanksTo: 'Gigi',
+        thanksToEmail: 'suginiinjani@students.unnes.ac.id'
+    },
+    {
         date: '24 April 2025',
         description: 'Pembaruan link form turnitin 2025',
         thanksTo: 'Aura',

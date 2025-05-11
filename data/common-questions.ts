@@ -8,17 +8,20 @@ const commonQuestions = [
         id: 1,
         question: 'Proses submit artikel di RJI gimana?',
         answer: `
-            Kirim artikel ke Pak Abas dan bilang ingin submit di RJI ->
+            OLD: Kirim artikel ke Pak Abas dan bilang ingin submit di RJI ->
             Jika disetujui, Submit ke RJI https://journal.unnes.ac.id/sju/index.php/rji ->
             Isi http://bit.ly/keteranganRJI ->
             Lalu lanjut konfirm ke Pak Yahya ->
-            Nunggu dapat email
+            Nunggu dapat email.
+            \n
+            NEW: Cek poin 12 di Pre-Wisuda
         `
     },
     {
         id: 2,
         question: 'Proses submit artikel di JAIST gimana?',
-        answer: 'Jaist tinggal upload, terus konfirmasi isi form, dapet surat keterangan upload!. Selesai. https://bit.ly/SuratJAIST. ~Yogiana'
+        answer: `Jaist tinggal upload, terus konfirmasi isi form, dapet surat keterangan upload!. Selesai. https://bit.ly/SuratJAIST. 
+        -Yogiana`
     },
     {
         id: 7,

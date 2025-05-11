@@ -19,7 +19,7 @@ const ColyAqu = () => {
                             {qu.question}
                         </AccordionTrigger>
                         <AccordionContent>
-                            {qu.answer}
+                            <p className="whitespace-pre-line">{qu.answer}</p>
                         </AccordionContent>
                     </AccordionItem>
                 ))}
