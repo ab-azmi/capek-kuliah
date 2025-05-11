@@ -153,8 +153,20 @@ export default function PreWisuda() {
                             Submit Artikel Ke Jurnal
                         </h1>
                         <p className="text-slate-400">
-                            Biasanya kalau TI submit di RJI, sedangkan SI submit di JAIST. Tapi coba tanyakan dulu ke pembimbing masing-masing
+                            Biasanya kalau TI submit di RJI, sedangkan SI submit di JAIST. 
+                            Tapi coba tanyakan dulu ke pembimbing masing-masing.
+                            Alurnya <span className="font-bold">Register - Submit Artikel - Isi Form Keterangan</span>
                         </p>
+                        <div className="flex gap-2 mt-2">
+                            <Link className={cn(buttonVariants(), 'mt-3 w-fit')} href="http://journal.unnes.ac.id/journals/rji"
+                                target="_blank">
+                                Submit RJI
+                            </Link>
+                            <Link className={cn(buttonVariants(), 'mt-3 w-fit')} href="http://bit.ly/keteranganRJI"
+                                target="_blank">
+                                Form Keterangan Telah Submit RJI
+                            </Link>
+                        </div>
                     </RevealRightCard>
                     
                 </div>
