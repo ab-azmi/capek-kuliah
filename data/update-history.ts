@@ -5,6 +5,12 @@ const updateHistoryData: {
     thanksToEmail: string,
 }[] = [
     {
+        date: '29 Juni 2025',
+        description: 'Tambah link Konsumsi TA FMIPA di Pra Sidang',
+        thanksTo: 'Nadhifah',
+        thanksToEmail: 'nadhifa@students.unnes.ac.id'
+    },
+    {
         date: '11 Mei 2025',
         description: 'Update Link form keterangan RJI',
         thanksTo: 'Gigi',
