@@ -238,6 +238,18 @@ export default function PreSidang() {
                             Google Form
                         </Link>
                     </RevealRightCard>
+                    <RevealRightCard>
+                        <h1 className="text-2xl font-semibold">
+                            Pemesanan Konsumsi Sidang
+                        </h1>
+                        <p className=" text-slate-400">
+                            Mulai 2025, Snack atau jamuan untuk penguji sidang sudah disediakan kampus.
+                            Usahakan H-3 Sudah pesan konsumsi ke FMIPA
+                        </p>
+                        <Link className={cn(buttonVariants(), 'mt-3')} href="http://s.id/KonsumsiTugasAkhirFMIPA" target="_blank">
+                            Google Form
+                        </Link>
+                    </RevealRightCard>
                 </div>
             </div>
             {/* 10 */}
