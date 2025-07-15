@@ -46,7 +46,13 @@ export default function PreSidang() {
                             Revisi Proposal dan Menulis Bab 4 & 5
                         </h1>
                         <p className=" text-slate-400">
-                            Untuk mengikuti sidang skripsi, kamu harus melakukan bimbingan sebanyak 12x. Jangan lupa input data bimbingan ke Sitedi.
+                            Sesuai {' '}
+                            <span className="text-pink-500 dark:text-pink-300">
+                                Edaran WR 1 Nomor B/5484/UN37/KR.01.02/2025
+                            </span> {' '}
+                            Untuk mengikuti sidang skripsi, kamu harus melakukan bimbingan sebanyak 
+                            {' '}<span className="text-pink-500 dark:text-pink-300">16x</span>. 
+                            Jangan lupa input data bimbingan ke Sitedi.
                         </p>
                     </RevealRightCard>
                     <RevealRightCard>

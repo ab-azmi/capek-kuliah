@@ -5,6 +5,12 @@ const updateHistoryData: {
     thanksToEmail: string,
 }[] = [
     {
+        date: '15 Juni 2025',
+        description: 'Update Min. Bimbingan untuk Sidang : 16 Kali',
+        thanksTo: 'Fauzan',
+        thanksToEmail: 'fauzanalivijsma@students.unnes.ac.id'
+    },
+    {
         date: '29 Juni 2025',
         description: 'Tambah link Konsumsi TA FMIPA di Pra Sidang',
         thanksTo: 'Nadhifah',
