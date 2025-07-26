@@ -9,7 +9,10 @@ export interface FormData {
   pembimbing: string
   penguji1: string
   penguji2: string
-  program: "TI" | "SI" // Add this new field
+  program: "TI" | "SI"
+  pembimbingGender: "L" | "P" // L = Laki-laki, P = Perempuan
+  penguji1Gender: "L" | "P"
+  penguji2Gender: "L" | "P"
 }
 
 const defaultFormData: FormData = {
@@ -19,7 +22,10 @@ const defaultFormData: FormData = {
   pembimbing: "",
   penguji1: "",
   penguji2: "",
-  program: "TI", // Add default value
+  program: "TI",
+  pembimbingGender: "L",
+  penguji1Gender: "L",
+  penguji2Gender: "L",
 }
 
 // Add these helper functions before the useFormData function
@@ -41,6 +47,14 @@ function getKaprodi(program: "TI" | "SI"): string {
   return program === "TI" ? "Pak Alamsyah" : "Pak Riza"
 }
 
+function getTitle(gender: "L" | "P", formal = true): string {
+  if (gender === "P") {
+    return formal ? "Ibu" : "Bu"
+  } else {
+    return formal ? "Bapak" : "Pak"
+  }
+}
+
 export function useFormData() {
   const [formData, setFormData] = useState<FormData>(defaultFormData)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -50,7 +64,12 @@ export function useFormData() {
     const saved = localStorage.getItem("skripsi-form-data")
     if (saved) {
       try {
-        setFormData(JSON.parse(saved))
+        const savedData = JSON.parse(saved)
+        // Ensure backward compatibility by adding default gender values if they don't exist
+        setFormData({
+          ...defaultFormData,
+          ...savedData,
+        })
       } catch (error) {
         console.error("Error loading form data:", error)
       }
@@ -81,20 +100,37 @@ export function useFormData() {
       const greeting = getTimeBasedGreeting()
       const kaprodi = getKaprodi(formData.program)
 
-      return template
-        .replace(/{greeting}/g, greeting)
-        .replace(/Selamat siang/g, greeting) // Replace hardcoded greetings
-        .replace(/Selamat sore/g, greeting)
-        .replace(/Selamat malam/g, greeting)
-        .replace(/{nama}/g, formData.nama || "{nama}")
-        .replace(/{name}/g, formData.nama || "{name}")
-        .replace(/{nim}/g, formData.nim || "{nim}")
-        .replace(/{angkatan}/g, formData.angkatan || "{angkatan}")
-        .replace(/{pembimbing}/g, formData.pembimbing || "{pembimbing}")
-        .replace(/{nama penguji lain}/g, formData.penguji1 || "{nama penguji lain}")
-        .replace(/{kaprodi}/g, kaprodi)
-        .replace(/{program}/g, formData.program === "TI" ? "Teknik Informatika" : "Sistem Informasi")
-        .replace(/Pak Alamsyah/g, kaprodi) // Replace hardcoded kaprodi references
+      // Get appropriate titles based on gender
+      const pembimbingTitle = getTitle(formData.pembimbingGender, true) // formal
+      const pembimbingTitleShort = getTitle(formData.pembimbingGender, false) // short
+      const penguji1Title = getTitle(formData.penguji1Gender, true)
+      const penguji1TitleShort = getTitle(formData.penguji1Gender, false)
+      const penguji2Title = getTitle(formData.penguji2Gender, true)
+      const penguji2TitleShort = getTitle(formData.penguji2Gender, false)
+
+      return (
+        template
+          .replace(/{greeting}/g, greeting)
+          .replace(/Selamat siang/g, greeting) // Replace hardcoded greetings
+          .replace(/Selamat sore/g, greeting)
+          .replace(/Selamat malam/g, greeting)
+          .replace(/{nama}/g, formData.nama || "{nama}")
+          .replace(/{name}/g, formData.nama || "{name}")
+          .replace(/{nim}/g, formData.nim || "{nim}")
+          .replace(/{angkatan}/g, formData.angkatan || "{angkatan}")
+          .replace(/{pembimbing}/g, formData.pembimbing || "{pembimbing}")
+          .replace(/{nama penguji lain}/g, formData.penguji1 || "{nama penguji lain}")
+          .replace(/{kaprodi}/g, kaprodi)
+          .replace(/Pak Alamsyah/g, kaprodi) // Replace hardcoded kaprodi references
+          .replace(/{program}/g, formData.program === "TI" ? "Teknik Informatika" : "Sistem Informasi")
+          // Add gender-based title replacements
+          .replace(/{pembimbing-title}/g, pembimbingTitle)
+          .replace(/{pembimbing-title-short}/g, pembimbingTitleShort)
+          .replace(/{penguji1-title}/g, penguji1Title)
+          .replace(/{penguji1-title-short}/g, penguji1TitleShort)
+          .replace(/{penguji2-title}/g, penguji2Title)
+          .replace(/{penguji2-title-short}/g, penguji2TitleShort)
+      )
     },
     [formData],
   )
