@@ -62,9 +62,7 @@ function PreProposalContent() {
   return (
     <div>
       {/* Form Section */}
-      <div className="mb-8">
-        <FormFields />
-      </div>
+      <FormFields />
 
       {/* 1 */}
       <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
