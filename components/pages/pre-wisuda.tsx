@@ -4,7 +4,7 @@ import { buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
 import { cn } from "@/lib/utils";
 import { RevealLeftCard, RevealRightCard } from "../reveal";
-import TemplateCard from "@/components/template-card";
+import TemplateChat from "@/components/template-chat";
 
 export default function PreWisuda() {
     const textRevisiPenguji = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktu Pak. Saya {nama} dengan NIM {nim}, dari prodi {program}, angkatan {angkatan}, mahasiswa yang telah diuji oleh Bapak pada Sidang Skripsi. Saya izin bertanya, Pak. Apakah hari ini saya dapat menemui Bapak terkait revisi Skripsi saya? Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
@@ -58,7 +58,7 @@ export default function PreWisuda() {
                         <p className="text-slate-400">
                             Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
                         </p>
-                        <TemplateCard title="Template Chat untuk Minta Revisi dari Penguji 1" text={textRevisiPenguji} />
+                        <TemplateChat title="Template Chat untuk Minta Revisi dari Penguji 1" text={textRevisiPenguji} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -67,7 +67,7 @@ export default function PreWisuda() {
                         <p className="text-slate-400">
                             Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
                         </p>
-                        <TemplateCard title="Template Chat untuk Minta Revisi dari Penguji 2" text={textRevisiPenguji} />
+                        <TemplateChat title="Template Chat untuk Minta Revisi dari Penguji 2" text={textRevisiPenguji} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -339,7 +339,7 @@ export default function PreWisuda() {
                         <p className=" text-slate-400">
                             Kamu bisa keluar dan pamitan dengan teman-teman kamu di grup
                         </p>
-                        <TemplateCard title="Template Chat untuk Pamitan dari Grup" text={textPamitGrup} />
+                        <TemplateChat title="Template Chat untuk Pamitan dari Grup" text={textPamitGrup} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">

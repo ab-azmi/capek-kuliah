@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
-import TemplateCard from "@/components/template-card";
+import TemplateChat from "@/components/template-chat";
 import { cn } from "@/lib/utils";
 import { RevealLeftCard, RevealRightCard } from "../reveal";
 
@@ -93,7 +93,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
                         </p>
-                        <TemplateCard title="Template Chat untuk Atur Jadwal Sidang" text={textAturJadwalSidang} />
+                        <TemplateChat title="Template Chat untuk Atur Jadwal Sidang" text={textAturJadwalSidang} />
                     </RevealRightCard>
                 </div>
             </div>
@@ -217,7 +217,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Setelah mengisi form, konfirmasi ke Kajur supaya mendapatkan file “Berkas Ujian”. Simpan file tersebut
                         </p>
-                        <TemplateCard title="Template Chat untuk Konfirmasi Sidang" text={textKonfirmasiSidang} />
+                        <TemplateChat title="Template Chat untuk Konfirmasi Sidang" text={textKonfirmasiSidang} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">

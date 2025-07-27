@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { RevealRightCard, RevealLeftCard } from "../reveal"
-import TemplateCard from "@/components/template-card"
+import TemplateChat from "@/components/template-chat"
 
 export default function PreProposal() {
   const textMintaPembimbing = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya telah menuliskan topik dan judul skripsi saya di Sitedi, saya memohon bantuan Bapak untuk memasukkan {pembimbing} sebagai dosen pembimbing saya. Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
@@ -93,7 +93,7 @@ export default function PreProposal() {
             <p className=" text-slate-400">
               Langkah ini bertujuan untuk memasangkan kamu dengan pembimbingmu secara resmi ke dalam sistem
             </p>
-            <TemplateCard title="Template Chat untuk Minta SK Pembimbing" text={textMintaPembimbing} />
+            <TemplateChat title="Template Chat untuk Minta SK Pembimbing" text={textMintaPembimbing} />
           </RevealRightCard>
 
           <RevealRightCard>
@@ -212,7 +212,7 @@ export default function PreProposal() {
               Chat ke Ketua Jurusan untuk dipilihkan dosen penguji. Mereka yang nantinya akan ngasih kamu nilai akhir
               skripsi
             </p>
-            <TemplateCard title="Template Chat untuk Minta Dosen Penguji" text={textMintaPenguji} />
+            <TemplateChat title="Template Chat untuk Minta Dosen Penguji" text={textMintaPenguji} />
           </RevealRightCard>
         </div>
       </div>
@@ -237,7 +237,7 @@ export default function PreProposal() {
             <p className=" text-slate-400">
               Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
             </p>
-            <TemplateCard title="Template Chat untuk Atur Jadwal Sempro" text={textAturJadwalSempro} />
+            <TemplateChat title="Template Chat untuk Atur Jadwal Sempro" text={textAturJadwalSempro} />
           </RevealRightCard>
 
           <RevealRightCard>

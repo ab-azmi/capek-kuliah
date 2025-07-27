@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { Copy, User } from "lucide-react";
 
-export default function TemplateCard({ title, text }: { title: string; text: string }) {
+export default function TemplateChat({ title, text }: { title: string; text: string }) {
     const { toast } = useToast()
     const { replaceTemplate } = useForm()
 
