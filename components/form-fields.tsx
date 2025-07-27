@@ -25,11 +25,7 @@ export function FormFields() {
     label: string;
     placeholder: string;
   }> = [
-    {
-      key: "nama",
-      label: "Nama Lengkap",
-      placeholder: "Masukkan nama lengkap",
-    },
+    { key: "nama", label: "Nama Lengkap", placeholder: "Masukkan nama lengkap" },
     { key: "nim", label: "NIM", placeholder: "Masukkan NIM" },
     { key: "angkatan", label: "Angkatan", placeholder: "Contoh: 2020" },
   ];
