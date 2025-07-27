@@ -10,7 +10,7 @@ export interface FormData {
   penguji1: string
   penguji2: string
   program: "TI" | "SI"
-  pembimbingGender: "L" | "P" // L = Laki-laki, P = Perempuan
+  pembimbingGender: "L" | "P"
   penguji1Gender: "L" | "P"
   penguji2Gender: "L" | "P"
 }
@@ -101,8 +101,8 @@ export function useFormData() {
       const kaprodi = getKaprodi(formData.program)
 
       // Get appropriate titles based on gender
-      const pembimbingTitle = getTitle(formData.pembimbingGender, true) // formal
-      const pembimbingTitleShort = getTitle(formData.pembimbingGender, false) // short
+      const pembimbingTitle = getTitle(formData.pembimbingGender, true)
+      const pembimbingTitleShort = getTitle(formData.pembimbingGender, false)
       const penguji1Title = getTitle(formData.penguji1Gender, true)
       const penguji1TitleShort = getTitle(formData.penguji1Gender, false)
       const penguji2Title = getTitle(formData.penguji2Gender, true)
