@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 import { RevealLeftCard, RevealRightCard } from "../reveal";
 
 export default function PreSidang() {
-    const textAturJadwalSidang = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya menghubungi berkaitan dengan Sidang Skripsi. Sebagai penguji 1 saya, apakah Pak punya waktu luang minggu depan untuk melaksanakan Sidang Skripsi? Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
+    const textAturJadwalSidang = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya menghubungi berkaitan dengan Sidang Skripsi. Sebagai penguji 1 saya, apakah Pak punya waktu luang minggu depan untuk melaksanakan Sidang Skripsi? Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
-    const textKonfirmasiSidang = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Izin menyampaikan dan memberikan konfirmasi bahwa saya telah mengisi formulir pendaftaran Sidang Skripsi. Saya memohon arahan Pak terkait SK penguji supaya saya dapat melaksanakan Sidang Skripsi, Pak. Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
+    const textKonfirmasiSidang = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Izin menyampaikan dan memberikan konfirmasi bahwa saya telah mengisi formulir pendaftaran Sidang Skripsi. Saya memohon arahan Pak terkait SK penguji supaya saya dapat melaksanakan Sidang Skripsi, Pak. Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
     return (
         <div>

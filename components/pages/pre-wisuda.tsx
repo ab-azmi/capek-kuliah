@@ -7,9 +7,9 @@ import { RevealLeftCard, RevealRightCard } from "../reveal";
 import TemplateChat from "@/components/template-chat";
 
 export default function PreWisuda() {
-    const textRevisiPenguji = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktu Pak. Saya {nama} dengan NIM {nim}, dari prodi {program}, angkatan {angkatan}, mahasiswa yang telah diuji oleh Bapak pada Sidang Skripsi. Saya izin bertanya, Pak. Apakah hari ini saya dapat menemui Bapak terkait revisi Skripsi saya? Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
+    const textRevisiPenguji = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktu Pak. Saya {nama} dengan NIM {nim}, dari prodi {program}, angkatan {angkatan}, mahasiswa yang telah diuji oleh Bapak pada Sidang Skripsi. Saya izin bertanya, Pak. Apakah hari ini saya dapat menemui Bapak terkait revisi Skripsi saya? Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
-    const textPamitGrup = `Assalamualaikum Wr. Wb. {greeting} Bapak/Ibu Dosen {program} Universitas Negeri Semarang, serta teman-teman semua. Saya {nama} dengan NIM {nim} angkatan {angkatan}. Mohon undur diri dari grup ini. Banyak terima kasih saya ucapkan untuk keluarga Ilmu Komputer atas ilmu pengetahuan, keterampilan dan kenangan-kenangan indahnya. Mohon maaf apabila terdapat salah tutur kata, tingkah laku yang kurang berkenan dan perilaku yang mengganggu kenyamanan. Terima kasih banyak, semoga kita diberikan nikmat sehat, rezeki yang melimpah dan selalu dalam lindungan Tuhan Yang Maha Esa. Terima kasih. 🙏 Wassalamualaikum Wr. Wb.`
+    const textPamitGrup = `Assalamualaikum Wr. Wb. {greeting} Bapak/Ibu Dosen {program} Universitas Negeri Semarang, serta teman-teman semua. Saya {nama} dengan NIM {nim} angkatan {angkatan}. Mohon undur diri dari grup ini. Banyak terima kasih saya ucapkan untuk keluarga Ilmu Komputer atas ilmu pengetahuan, keterampilan dan kenangan-kenangan indahnya. Mohon maaf apabila terdapat salah tutur kata, tingkah laku yang kurang berkenan dan perilaku yang mengganggu kenyamanan. Terima kasih banyak, semoga kita diberikan nikmat sehat, rezeki yang melimpah dan selalu dalam lindungan Tuhan Yang Maha Esa. Terima kasih. Wassalamualaikum Wr. Wb. 🙏`
 
     return (
         <div>
