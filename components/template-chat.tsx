@@ -24,7 +24,7 @@ export default function TemplateChat({ title, text }: { title: string; text: str
     }
 
     return (
-        <div className="mt-3 border rounded-lg p-4 bg-muted/50">
+        <div className="mt-3 border rounded-lg p-4 bg-muted/30">
             <div className="flex items-center justify-between mb-2">
                 <h4 className="font-medium text-sm">{title}</h4>
                 <Button size="sm" variant="outline" onClick={() => copyChat(processedText)} className="h-8 px-2">
