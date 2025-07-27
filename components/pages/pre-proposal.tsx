@@ -2,68 +2,18 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { useToast } from "@/components/ui/use-toast"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { RevealRightCard, RevealLeftCard } from "../reveal"
-import { Copy, User } from "lucide-react"
-import { FormProvider, useForm } from "@/components/form-context"
-import { FormFields } from "@/components/form-fields"
+import TemplateCard from "@/components/template-card"
 
-function TemplateCard({ title, text }: { title: string; text: string }) {
-  const { toast } = useToast()
-  const { replaceTemplate } = useForm()
-
-  const processedText = replaceTemplate(text)
-
-  const copyChat = (text: string) => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        toast({
-          title: "Template berhasil disalin",
-          description: "Template sudah siap untuk dikirim",
-        })
-      })
-      .catch((err) => {
-        console.error("Failed to copy text: ", err)
-      })
-  }
-
-  return (
-    <div className="mt-3 border rounded-lg p-4 bg-muted/50">
-      <div className="flex items-center justify-between mb-2">
-        <h4 className="font-medium text-sm">{title}</h4>
-        <Button size="sm" variant="outline" onClick={() => copyChat(processedText)} className="h-8 px-2">
-          <Copy className="h-3 w-3 mr-1" />
-          Copy
-        </Button>
-      </div>
-      <div className="text-sm text-muted-foreground bg-background rounded p-3 border">
-        <pre className="whitespace-pre-wrap font-sans">{processedText}</pre>
-      </div>
-      {processedText.includes("{") && (
-        <p className="text-xs text-amber-600 mt-2 flex items-center gap-1">
-          <User className="h-3 w-3" />
-          Masih ada data yang perlu diisi di form di atas
-        </p>
-      )}
-    </div>
-  )
-}
-
-function PreProposalContent() {
-  const textMintaPembimbing = `Assalamualaikum Warahmatullahi Wabarakatuh. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya telah menuliskan topik dan judul skripsi saya di Sitedi, saya memohon bantuan Bapak untuk memasukkan {pembimbing} sebagai dosen pembimbing saya. Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
-
-  const textMintaPenguji = `Assalamualaikum Warahmatullahi Wabarakatuh. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Izin menyampaikan bahwa saya telah mengisi formulir pendaftaran seminar proposal. Mohon arahannya terkait plotting dosen penguji saya, Pak. Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
-
-  const textAturJadwalSempro = `Assalamualaikum Warahmatullahi Wabarakatuh. {greeting} Pak, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}, {program} {angkatan}. Pada semester ini saya berencana untuk menyelesaikan Skripsi. Lalu sesuai arahan dari {kaprodi}, Bapak bersama dengan Pak {nama penguji lain} akan menjadi Penguji 1 dan Penguji 2 saya. Mohon bimbingannya Pak. Selain itu, kalau boleh tahu apa minggu depan Bapak ada waktu senggang untuk melaksanakan seminar proposal saya? Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
+export default function PreProposal() {
+  const textMintaPembimbing = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya telah menuliskan topik dan judul skripsi saya di Sitedi, saya memohon bantuan Bapak untuk memasukkan {pembimbing} sebagai dosen pembimbing saya. Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
+  const textMintaPenguji = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Izin menyampaikan bahwa saya telah mengisi formulir pendaftaran Seminar Proposal. Mohon arahannya terkait plotting dosen penguji saya, Pak. Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
+  const textAturJadwalSempro = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}, {program} {angkatan}. Pada semester ini saya berencana untuk menyelesaikan Skripsi. Lalu sesuai arahan dari {kaprodi}, Bapak bersama dengan Pak {nama penguji lain} akan menjadi Penguji 1 dan Penguji 2 saya. Mohon bimbingannya Pak. Selain itu, kalau boleh tahu apa minggu depan Bapak ada waktu senggang untuk melaksanakan Seminar Proposal saya? Terima kasih, Pak. 🙏 Wassalamualaikum Wr. Wb.`
 
   return (
     <div>
-      {/* Form Section */}
-      <FormFields />
-
       {/* 1 */}
       <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
         <RevealLeftCard>
@@ -324,13 +274,5 @@ function PreProposalContent() {
         </div>
       </div>
     </div>
-  )
-}
-
-export default function PreProposal() {
-  return (
-    <FormProvider>
-      <PreProposalContent />
-    </FormProvider>
   )
 }
