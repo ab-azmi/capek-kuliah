@@ -85,7 +85,7 @@ export function FormFields() {
             <span>Informasi Pribadi</span>
             <p className="text-sm text-muted-foreground">
               Isi data di bawah ini untuk otomatis mengganti placeholder di
-              template chat
+              template chat. Data tidak disimpan dalam server, hanya di penyimpanan lokal perangkat anda.
             </p>
           </div>
           {personalOpen ? (
