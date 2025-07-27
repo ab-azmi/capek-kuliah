@@ -83,7 +83,7 @@ export function useFormData() {
 
     const timeoutId = setTimeout(() => {
       localStorage.setItem("skripsi-form-data", JSON.stringify(formData))
-    }, 500) // 500ms debounce
+    }, 500)
 
     return () => clearTimeout(timeoutId)
   }, [formData, isLoaded])
@@ -121,7 +121,7 @@ export function useFormData() {
           .replace(/{pembimbing}/g, formData.pembimbing || "{pembimbing}")
           .replace(/{nama penguji lain}/g, formData.penguji1 || "{nama penguji lain}")
           .replace(/{kaprodi}/g, kaprodi)
-          .replace(/Pak Alamsyah/g, kaprodi) // Replace hardcoded kaprodi references
+          .replace(/Pak Alamsyah/g, kaprodi)
           .replace(/{program}/g, formData.program === "TI" ? "Teknik Informatika" : "Sistem Informasi")
           // Add gender-based title replacements
           .replace(/{pembimbing-title}/g, pembimbingTitle)
