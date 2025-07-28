@@ -1,26 +1,16 @@
 "use client"
 import Link from "next/link";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
-import { useToast } from "@/components/ui/use-toast";
+import TemplateChat from "@/components/template-chat";
 import { cn } from "@/lib/utils";
 import { RevealLeftCard, RevealRightCard } from "../reveal";
 
 export default function PreSidang() {
-    const { toast } = useToast();
+    const textAturJadwalSidang = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya menghubungi berkaitan dengan Sidang Skripsi. Sebagai penguji 1 saya, apakah Pak punya waktu luang minggu depan untuk melaksanakan Sidang Skripsi? Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
-    const textAturJadwalSidang = `Assalamualaikum Wr. Wb. Selamat Pagi Bu. Mohon maaf mengganggu. Saya Abdillah Azmi, NIM 4611420020. Saya menghubungi berkaitan dengan sidang skripsi Bu. Sebagai penguji 1 saya, apakah Ibu punya waktu luang minggu depan untuk melaksanakan sidang skripsi? Terimakasih waktunya. Wassalamualaikum Wr. Wb.`;
-    const textKonfirmasiSidang = `Assalamu'alaikum Wr. Wb. Selamat Pagi Pak Alamsyah, mohon maaf apabila mengganggu waktu Bapak. Saya Bimo Aryo Bramantyo KR, NIM 4611420038, Izin menyampaikan dan memberikan konfirmasi bahwa saya telah mengisi formulir pendaftaran sidang skripsi. Saya memohon arahan bapak terkait SK penguji supaya saya dapat melaksanakan sidang skripsi, Pak.Terima Kasih Pak`;
+    const textKonfirmasiSidang = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Izin menyampaikan dan memberikan konfirmasi bahwa saya telah mengisi formulir pendaftaran Sidang Skripsi. Saya memohon arahan Pak terkait SK penguji supaya saya dapat melaksanakan Sidang Skripsi, Pak. Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
-    const copyChat = (text: string) => {
-        navigator.clipboard.writeText(text).then(() => {
-            toast({
-                title: "Template berhasil disalin",
-            })
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
     return (
         <div>
             {/* 6 */}
@@ -103,9 +93,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textAturJadwalSidang)}>
-                            Template Chat
-                        </Button>
+                        <TemplateChat title="Template Chat untuk Atur Jadwal Sidang" text={textAturJadwalSidang} />
                     </RevealRightCard>
                 </div>
             </div>
@@ -229,9 +217,7 @@ export default function PreSidang() {
                         <p className=" text-slate-400">
                             Setelah mengisi form, konfirmasi ke Kajur supaya mendapatkan file “Berkas Ujian”. Simpan file tersebut
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textKonfirmasiSidang)}>
-                            Template Chat
-                        </Button>
+                        <TemplateChat title="Template Chat untuk Konfirmasi Sidang" text={textKonfirmasiSidang} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">

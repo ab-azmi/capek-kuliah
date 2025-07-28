@@ -1,26 +1,15 @@
 "use client";
 import Link from "next/link";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { CheckboxWithLabel } from "../checkbox-label";
-import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { RevealLeftCard, RevealRightCard } from "../reveal";
+import TemplateChat from "@/components/template-chat";
 
 export default function PreWisuda() {
-    const { toast } = useToast();
+    const textRevisiPenguji = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktu Pak. Saya {nama} dengan NIM {nim}, dari prodi {program}, angkatan {angkatan}, mahasiswa yang telah diuji oleh Bapak pada Sidang Skripsi. Saya izin bertanya, Pak. Apakah hari ini saya dapat menemui Bapak terkait revisi Skripsi saya? Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
-    const textRevisiPenguji = `Assalamualaikum warahmatullahi wabarakatuh. Selamat pagi, Pak. Mohon maaf mengganggu waktunya. Nama saya Ahmad Ramadhan Auni dengan NIM 4611420033 dari Prodi Teknik Informatika Angkatan 2020, mahasiswa yang telah diuji oleh Bapak pada sidang skripsi tanggal 18 Juli. Saya izin bertanya, Pak. Apakah pada hari ini saya dapat menemui Bapak terkait revisi skripsi saya? Terima kasih, Pak.`;
-    const textPamitGrup = `Assalamualaikum wr., wb. Selamat siang Bapak/Ibu Dosen Teknik Informatika Universitas Negeri Semarang, serta teman semua. Saya Abdillah Azmi NIM 4611420020 angkatan 2018. Mohon undur diri dari grup ini. Banyak2 terimakasih saya ucapkan untuk keluarga Ilmu Komputer atas ilmu pengetahuan, keterampilan dan kenangan2 indahnya tentunya. Mohon maaf apabila terdapat salah tutur kata, tingkah yg kurang berkenan dan perilaku yang mengganggu kenyamanan. Terimakasih banyak, semoga kita diberikan nikmat sehat, rezeki yang melimpah dan selalu dalam lindungan Tuhan Yang Maha Esa. Terima kasih, Abdillah Azmi`;
-
-    const copyChat = (text: string) => {
-        navigator.clipboard.writeText(text).then(() => {
-            toast({
-                title: "Template berhasil disalin",
-            })
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
+    const textPamitGrup = `Assalamualaikum Wr. Wb. {greeting} Bapak/Ibu Dosen {program} Universitas Negeri Semarang, serta teman-teman semua. Saya {nama} dengan NIM {nim} angkatan {angkatan}. Mohon undur diri dari grup ini. Banyak terima kasih saya ucapkan untuk keluarga Ilmu Komputer atas ilmu pengetahuan, keterampilan dan kenangan-kenangan indahnya. Mohon maaf apabila terdapat salah tutur kata, tingkah laku yang kurang berkenan dan perilaku yang mengganggu kenyamanan. Terima kasih banyak, semoga kita diberikan nikmat sehat, rezeki yang melimpah dan selalu dalam lindungan Tuhan Yang Maha Esa. Terima kasih. Wassalamualaikum Wr. Wb. 🙏`
 
     return (
         <div>
@@ -69,9 +58,7 @@ export default function PreWisuda() {
                         <p className="text-slate-400">
                             Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textRevisiPenguji)}>
-                            Template Chat
-                        </Button>
+                        <TemplateChat title="Template Chat untuk Minta Revisi dari Penguji 1" text={textRevisiPenguji} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -80,9 +67,7 @@ export default function PreWisuda() {
                         <p className="text-slate-400">
                             Mekanismenya sama seperti saat bimbingan. Chat &rarr; Ketemu &rarr; Revisi &rarr; Repeat. Jangan lupa minta TTD lembar pengesahan jika sudah di ACC
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textRevisiPenguji)}>
-                            Template Chat
-                        </Button>
+                        <TemplateChat title="Template Chat untuk Minta Revisi dari Penguji 2" text={textRevisiPenguji} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -354,9 +339,7 @@ export default function PreWisuda() {
                         <p className=" text-slate-400">
                             Kamu bisa keluar dan pamitan dengan teman-teman kamu di grup
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textPamitGrup)}>
-                            Template Chat
-                        </Button>
+                        <TemplateChat title="Template Chat untuk Pamitan dari Grup" text={textPamitGrup} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">

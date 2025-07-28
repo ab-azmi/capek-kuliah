@@ -1,28 +1,15 @@
 "use client"
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useToast } from "@/components/ui/use-toast"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils";
 import { RevealRightCard, RevealLeftCard } from "../reveal";
-
+import TemplateChat from "@/components/template-chat";
 
 export default function PreProposal() {
-    const { toast } = useToast();
-
-    const textMintaPembimbing = `Assalamualaikum Warahmatullahi Wabarakatuh. Selamat Siang Pak Alamsyah, mohon maaf mengganggu waktu Bapak. Saya {nama} dengan NIM {nim}. Saya telah menuliskan topik dan judul skripsi saya di Sitedi, saya memohon bantuan bapak untuk memasukkan {pembimbing} sebagai dosen pembimbing saya, Pak. Terima kasih, Pak`;
-    const textMintaPenguji = `Assalamualaikum wr. wb. Selamat sore, Pak Alamsyah. Mohon maaf mengganggu waktu Bapak. Saya {name} NIM {nim}. Izin menyampaikan bahwa saya telah mengisi formulir pendaftaran seminar proposal. Mohon arahannya terkait plotting dosen penguji saya Pak. Terima kasih, Pak. 🙏 Wassalamualaikum wr. wb.`;
-    const textAturJadwalSempro = `Assalamualaikum Wr. Wb. Selamat siang Bu, mohon maaf mengganggu. Saya {nama} NIM {nim}, TI {angkatan}. Pada semester ini saya berencana untuk menyelesaikan skripsi. Lalu sesuai arahan dari Pak Alam, Ibu bersama dengan Pak {nama penguji lain} akan menjadi penguji 1 dan 2 saya. Mohon bimbingannya Ibu.Selain itu, kalau boleh tahu apa minggu depan Ibu ada waktu senggang untuk melaksanakan seminar proposal saya?Terimakasih. Wassalamualaikum Wr. Wb.`
-
-    const copyChat = (text: string) => {
-        navigator.clipboard.writeText(text).then(() => {
-            toast({
-                title: "Template berhasil disalin",
-            })
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
+    const textMintaPembimbing = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Saya telah menuliskan topik dan judul skripsi saya di Sitedi, saya memohon bantuan Bapak untuk memasukkan {pembimbing} sebagai dosen pembimbing saya. Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
+    const textMintaPenguji = `Assalamualaikum Wr. Wb. {greeting} {kaprodi}, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}. Izin menyampaikan bahwa saya telah mengisi formulir pendaftaran Seminar Proposal. Mohon arahannya terkait plotting dosen penguji saya, Pak. Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
+    const textAturJadwalSempro = `Assalamualaikum Wr. Wb. {greeting} Pak, mohon maaf mengganggu waktunya. Saya {nama} dengan NIM {nim}, {program} {angkatan}. Pada semester ini saya berencana untuk menyelesaikan Skripsi. Lalu sesuai arahan dari {kaprodi}, Bapak bersama dengan Pak {nama penguji lain} akan menjadi Penguji 1 dan Penguji 2 saya. Mohon bimbingannya Pak. Selain itu, kalau boleh tahu apa minggu depan Bapak ada waktu senggang untuk melaksanakan Seminar Proposal saya? Terima kasih, Pak. Wassalamualaikum Wr. Wb. 🙏`
 
     return (
         <div>
@@ -43,7 +30,7 @@ export default function PreProposal() {
                         </div>
                     </div>
                 </RevealLeftCard>
-                <div 
+                <div
                     className="col-span-2 flex flex-col gap-4">
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -76,7 +63,7 @@ export default function PreProposal() {
                 </div>
             </div>
             {/* 2 */}
-            <div  className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
@@ -92,7 +79,7 @@ export default function PreProposal() {
                         </div>
                     </div>
                 </RevealLeftCard>
-                <div 
+                <div
                     className="col-span-2 flex flex-col gap-4">
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -109,7 +96,7 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Langkah ini bertujuan untuk memasangkan kamu dengan pembimbingmu secara resmi ke dalam sistem
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textMintaPembimbing)}>Template Chat</Button>
+                        <TemplateChat title="Template Chat untuk Minta SK Pembimbing" text={textMintaPembimbing} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
@@ -172,7 +159,7 @@ export default function PreProposal() {
                 </div>
             </div>
             {/* 4 */}
-            <div  className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
+            <div className="py-5 flex flex-col md:grid md:grid-cols-3 gap-4">
                 <RevealLeftCard>
                     <div className="flex gap-3">
                         <div className="bg-secondary text-primary rounded-md min-w-8 min-h-8 h-8 w-8 flex items-center justify-center font-bold">
@@ -220,7 +207,7 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Chat ke Ketua Jurusan untuk dipilihkan dosen penguji. Mereka yang nantinya akan ngasih kamu nilai akhir skripsi
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textMintaPenguji)}>Template Chat</Button>
+                        <TemplateChat title="Template Chat untuk Minta Dosen Penguji" text={textMintaPenguji} />
                     </RevealRightCard>
                 </div>
             </div>
@@ -249,7 +236,7 @@ export default function PreProposal() {
                         <p className=" text-slate-400">
                             Hubungi kedua dosen penguji secara privat. Jangan takut. Pastikan cocok juga dengan dosen pembimbing.
                         </p>
-                        <Button className="mt-3" onClick={() => copyChat(textAturJadwalSempro)}>Template Chat</Button>
+                        <TemplateChat title="Template Chat untuk Atur Jadwal Sempro" text={textAturJadwalSempro} />
                     </RevealRightCard>
                     <RevealRightCard>
                         <h1 className="text-2xl font-semibold">
