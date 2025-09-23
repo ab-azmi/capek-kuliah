@@ -6,8 +6,9 @@ export const dosenTI = [
         email: "alamsyah@mail.unnes.ac.id",
         phone: "+62 815-6513-617",
         jabatan: "Ketua Jurusan",
-        nip: "NIP-197405172006041001",
         prodi: "TI",
+        nip: "NIP-197405172006041001",
+        gender: "L"
     },
     {
         alt: 'Endang',
@@ -18,6 +19,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-197401071999032001",
+        gender: "P"
     },
     {
         alt: 'Florentina',
@@ -28,6 +30,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-197810252003122001",
+        gender: "P"
     },
     {
         alt: 'Zaenal',
@@ -38,6 +41,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-198205042005011001",
+        gender: "L"
     },
     {
         alt: 'Riza',
@@ -48,6 +52,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-198005252005011001",
+        gender: "L"
     },
     {
         alt: 'Aziz',
@@ -58,6 +63,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-197404202008121001",
+        gender: "L"
     },
     {
         alt: 'Purwinarko',
@@ -68,6 +74,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-198509102015041001",
+        gender: "L"
     },
     {
         alt: 'Anggyi',
@@ -78,6 +85,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-198707062014041003",
+        gender: "L"
     },
     {
         alt: 'Abas',
@@ -88,6 +96,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-199110302022031006",
+        gender: "L"
     },
     {
         alt: 'Jumanto',
@@ -98,6 +107,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-199202072023211024",
+        gender: "L"
     },
     {
         alt: 'Faris',
@@ -108,6 +118,7 @@ export const dosenTI = [
         prodi: "TI",
         jabatan: "Dosen",
         nip: "NIP-199203272022031003",
+        gender: "L"
     },
     
 ]
@@ -122,6 +133,7 @@ export const dosenSI = [
         prodi: "SI",
         jabatan: "Dosen",
         nip: "NIP-198805012014041001",
+        gender: "L"
     },
     {
         alt: 'Subhan',
@@ -132,6 +144,7 @@ export const dosenSI = [
         prodi: "SI",
         jabatan: "Dosen",
         nip: "NIP-198909042019031014",
+        gender: "L"
     },
     {
         alt: 'Yahya',
@@ -142,6 +155,7 @@ export const dosenSI = [
         prodi: "SI",
         jabatan: "Dosen",
         nip: "NIP-199001172022031008",
+        gender: "L"
     },
     {
         alt: 'Kholiq Budiman',
@@ -152,6 +166,7 @@ export const dosenSI = [
         prodi: "SI",
         jabatan: "Dosen",
         nip: "NIP-199209242019031013",
+        gender: "L"
     },
     {
         alt: 'Efrilianda',
@@ -162,6 +177,7 @@ export const dosenSI = [
         prodi: "SI",
         jabatan: "Dosen",
         nip: "NIP-199304152019032012",
+        gender: "P"
     },
     {
         alt: 'Yusuf',
@@ -172,5 +188,6 @@ export const dosenSI = [
         prodi: "SI",
         jabatan: "Dosen",
         nip: "NIP-1993051020230812001",
+        gender: "L"
     },
 ]

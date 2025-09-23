@@ -36,7 +36,7 @@ export default function TemplateDownload() {
           <DownloadButton 
             icon={<FaBookOpen size={24} />}
             targetText="Buku Panduan"
-            link="https://drive.google.com/file/d/1_xRw7AxbWcHzJ2ha9fKqERqiKS1W03qn/view"
+            link="https://drive.google.com/file/d/1Ky0ahGtO69IVPXi6Ow3sUSdH99VZ6eUM/view"
             isLink
           />
         </div>
