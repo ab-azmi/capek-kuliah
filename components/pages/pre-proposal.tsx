@@ -55,6 +55,18 @@ export default function PreProposal() {
                             <li>Baca buku di perpus / rumah ilmu</li>
                             <li>Baca skripsi kating</li>
                             <li>Nonton tutorial di youtub</li>
+                            <li>
+                                <Link className="underline text-blue-500" href="https://lib.unnes.ac.id/view/divisions/si=5Fs1" target="_blank">
+                                    Skripsi SI
+                                </Link>
+                                {" "}(Request needed)
+                            </li>
+                            <li>
+                                <Link className="underline text-blue-500" href="https://lib.unnes.ac.id/view/divisions/ti=5Fs1" target="_blank">
+                                    Skripsi TI
+                                </Link>
+                                {" "}(Request needed)
+                            </li>
                         </ul>
                         <Link className={cn(buttonVariants(), 'mt-3')} href={"https://drive.google.com/drive/folders/1n2e53N97p_uQcralIwHUuALn8JiLQ34M?usp=sharing"} target="_blank">
                             Skripsi Kating
