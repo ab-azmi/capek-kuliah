@@ -99,7 +99,7 @@ const DosenCard = ({
                         transformStyle: "preserve-3d",
                         transform: "translateZ(75px)",
                     }}
-                    className="relative flex flex-col gap-3 rounded-xl bg-black/30 backdrop-blur-lg border border-slate-500 shadow-lg p-4"
+                    className="relative flex flex-col gap-3 rounded-xl bg-black/60 backdrop-blur-lg border border-slate-500 shadow-lg p-4"
                 >
                     <div
                         style={{
@@ -111,8 +111,12 @@ const DosenCard = ({
                     </div>
                     <div className="flex flex-col gap-3 text-slate-200">
 
-                        <div className=" font-bold">
+                        <div className="font-bold">
                             {name}
+                        </div>
+                        <div
+                            className="flex gap-2 items-center text-sm">
+                            <p>{email || "N/A"}</p>
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
@@ -122,7 +126,7 @@ const DosenCard = ({
                         <div
                             className="flex gap-2 items-center text-sm">
                             <Phone className="text-slate-200/40 h-5 w-5" />
-                            <p>{phone}</p>
+                            <p>{phone || "N/A"}</p>
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
