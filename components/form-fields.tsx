@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useForm } from "./form-context";
 import type { FormData } from "../hooks/useFormData";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
@@ -13,12 +15,27 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { dosenTI, dosenSI } from "../data/dosen";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export function FormFields() {
   const { formData, updateField } = useForm();
-  const [personalOpen, setPersonalOpen] = useState(false);
+  const [personalOpen, setPersonalOpen] = useState<boolean>(true);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    const savedPersonalOpen = localStorage.getItem("personal-open");
+    if (savedPersonalOpen) {
+      setPersonalOpen(savedPersonalOpen === "true");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      localStorage.setItem("personal-open", personalOpen.toString());
+    }
+  }, [personalOpen, isClient]);
 
   const personalFields: Array<{
     key: keyof Omit<FormData, "program">;
@@ -113,7 +130,12 @@ export function FormFields() {
             ))}
           </div>
           <div className="space-y-4">
-            <Label className="text-base font-medium">Informasi Dosen</Label>
+            <Label className="flex justify-between items-center text-base font-medium">
+              Informasi Dosen
+              <Link href="/dosen" className={cn(buttonVariants({ variant: 'outline' }), 'flex items-center justify-center gap-2 w-auto lg:w-fit')}>
+                List Dosen Lengkap
+              </Link>
+            </Label>
             {lecturerFields.map(({ nameKey, label }) => {
               const selectedLecturer = getSelectedLecturer(nameKey);
 
@@ -157,16 +179,21 @@ export function FormFields() {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="font-medium">Email:</span>
-                        <span className="text-blue-600">
-                          {selectedLecturer.email}
-                        </span>
+                        <a 
+                          href={`mailto:${selectedLecturer.email}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {selectedLecturer.email || "N/A"}
+                        </a>
                       </div>
-                      {selectedLecturer.phone && (
-                        <div className="flex items-center gap-2">
-                          <span className="font-medium">Phone:</span>
-                          <span>{selectedLecturer.phone}</span>
-                        </div>
-                      )}
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">Phone:</span>
+                        <span>{selectedLecturer.phone || "N/A"}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">NIP:</span>
+                        <span>{selectedLecturer.nip || "N/A"}</span>
+                      </div>
                     </div>
                   )}
                 </div>

@@ -1,7 +1,10 @@
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { ArrowLeft } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { dosenTI, dosenSI } from "@/data/dosen"
 import DosenCard from "./dosen-card"
-import Head from "next/head"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -13,13 +16,17 @@ export default function ListDosen() {
     return (
 
         <main className="flex min-h-screen flex-col gap-4 lg:gap-14 px-4 md:px-20 lg:px-36 py-5 lg:py-20">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col-reverse justify-between items-start gap-5 sm:flex-row sm:items-center">
                 <div>
                     <h1 className="text-xl lg:text-3xl font-bold">List Dosen ILKOM UNNES</h1>
                     <p className="text-sm lg:text-lg text-slate-400">
                         Lengkap dengan kontak dan info lainnya
                     </p>
                 </div>
+                <Link href="/" className={cn(buttonVariants({ variant: 'outline' }), 'flex items-center justify-center gap-2 text-sm w-fit')}>
+                    <ArrowLeft size={20}/>
+                    Kembali
+                </Link>
             </div>
 
             <Tabs defaultValue="ti" className="w-full">

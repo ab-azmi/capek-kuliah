@@ -207,14 +207,14 @@ export default function DashboardBoxes() {
                         </div>
                         <div className="flex gap-3 items-center">
                             <Avatar>
-                                <AvatarImage alt="Faris Faikar" src="https://github.com/farisfaikar.png" />
+                                <AvatarImage alt="Faris S.Kom" src="https://github.com/farisfaikar.png" />
                                 <AvatarFallback>
                                     FF
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
                                 <h1 className="font-bold text-sm flex items-center gap-2">
-                                    Faris Faikar
+                                    Faris S.Kom
                                     <div className="flex items-center gap-1">
                                         <Link href="https://linkedin.com/in/farisfaikar" target="_blank">
                                             <FaLinkedin size={16}/>
