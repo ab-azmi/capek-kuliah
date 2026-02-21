@@ -121,11 +121,6 @@ const DosenCard = ({
                         </div>
                         <div
                             className="flex gap-2 items-center text-sm">
-                            <Phone className="text-slate-200/40 h-5 w-5" />
-                            <p>{phone}</p>
-                        </div>
-                        <div
-                            className="flex gap-2 items-center text-sm">
                             <Fingerprint className="text-slate-200/40 h-5 w-5" />
                             <p>{nip}</p>
                         </div>
