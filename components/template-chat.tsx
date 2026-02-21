@@ -38,7 +38,7 @@ export default function TemplateChat({ title, text }: { title: string; text: str
             {processedText.includes("{") && (
                 <p className="text-xs text-amber-600 mt-2 flex items-center gap-1">
                     <User className="h-3 w-3" />
-                    Masih ada data yang perlu diisi di form di atas
+                    {'Masih ada data yang perlu diisi di form "Informasi Pribadi"'}
                 </p>
             )}
         </div>
