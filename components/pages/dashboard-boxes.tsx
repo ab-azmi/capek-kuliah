@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import updateHistoryData from "@/data/update-history"
 import UpdateHistory from "../update-history"
+import { cn } from "@/lib/utils"
 
 export default function DashboardBoxes() {
     const [selectedQna, setSelectedQna] = useState(berkasWajib[0]);
@@ -152,82 +153,19 @@ export default function DashboardBoxes() {
                     initial={{y: -60, x: 60, opacity: 0}}
                     animate={{y: 0, x:0, opacity: 1, transition: {duration: 0.3, delay: 0.4}}}
                     className="border-2 rounded-lg p-3 lg:p-5">
-                    <h1 className="font-bold text-xl lg:text-2xl">Dev Team</h1>
+                    <h1 className="font-bold text-xl lg:text-2xl">Shared Project</h1>
                     <p className=" text-slate-400 text-sm lg:text-base">
-                        Selaku dev team sangat berterimakasih & senang bisa bantu kalian. Kalau ada yg keliru, hubungi saja ya
+                        Project buatan teman ILKOM yang dapat bermanfaat dalam pembuatan skripsi
                     </p>
                     <div className="mt-5 flex flex-col gap-3 lg:gap-5">
-                        <div className="flex gap-3 items-center">
-                            <Avatar>
-                                <AvatarImage alt="Auni S.Kom" src="https://github.com/auni-st.png" />
-                                <AvatarFallback>
-                                    AU
-                                </AvatarFallback>
-                            </Avatar>
-                            <div className="flex flex-col">
-                                <h1 className="font-bold text-sm flex items-center gap-2">
-                                    Auni S.Kom
-                                    <div className="flex items-center gap-1">
-                                        <Link href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank">
-                                            <FaLinkedin size={16}/>
-                                        </Link>
-                                        <Link href="https://github.com/auni-st" target="_blank">
-                                            <FaGithub size={16}/>
-                                        </Link>
-                                    </div>
-                                </h1>
-                                <p className=" text-slate-400 text-xs lg:text-sm">
-                                aramadhan395@gmail.com
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <Avatar>
-                                <AvatarImage alt="Azmi" src="https://github.com/ab-azmi.png" />
-                                <AvatarFallback>
-                                    AZ
-                                </AvatarFallback>
-                            </Avatar>
-                            <div className="flex flex-col">
-                                <h1 className="font-bold text-sm flex items-center gap-2">
-                                    Azmi
-                                    <div className="flex items-center gap-1">
-                                        <Link href="https://www.linkedin.com/in/abdillah-azmi-4a2111232" target="_blank">
-                                            <FaLinkedin size={16}/>
-                                        </Link>
-                                        <Link href="https://github.com/ab-azmi" target="_blank">
-                                            <FaGithub size={16}/>
-                                        </Link>
-                                    </div>
-                                </h1>
-                                <p className=" text-slate-400 text-xs lg:text-sm">
-                                    azmi.kiva@gmail.com
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <Avatar>
-                                <AvatarImage alt="Faris S.Kom" src="https://github.com/farisfaikar.png" />
-                                <AvatarFallback>
-                                    FF
-                                </AvatarFallback>
-                            </Avatar>
-                            <div className="flex flex-col">
-                                <h1 className="font-bold text-sm flex items-center gap-2">
-                                    Faris S.Kom
-                                    <div className="flex items-center gap-1">
-                                        <Link href="https://linkedin.com/in/farisfaikar" target="_blank">
-                                            <FaLinkedin size={16}/>
-                                        </Link>
-                                        <Link href="https://github.com/farisfaikar" target="_blank">
-                                            <FaGithub size={16}/>
-                                        </Link>
-                                    </div>
-                                </h1>
-                                <p className=" text-slate-400 text-xs lg:text-sm">
-                                    farisfaikar.r@gmail.com
-                                </p>
-                            </div>
+                        <div className="flex flex-col">
+                            <Link href="https://github.com/lutfizp/PLS-SEM-PY" className={cn(buttonVariants({variant: 'link', size: 'sm'}), 'w-fit flex gap-2 mt-2 p-0')} target="_blank">
+                                <p>PLS-SEM-PY</p> 
+                                <FaGithub size={16}/>
+                            </Link>
+                            <p className=" text-slate-400 text-xs lg:text-sm">
+                                Python implementation of PLS-SEM (Partial Least Squares Structural Equation Modeling) built using Streamlit
+                            </p>    
                         </div>
                     </div>
                 </motion.div>
